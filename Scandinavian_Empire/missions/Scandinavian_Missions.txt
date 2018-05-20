@@ -130,7 +130,7 @@ sca_empire = {
 	}
 	conquer_alexandria = {
 		icon = mission_unite_home_region
-		required_missions = { integrate_pommerania }
+		required_missions = { integrate_estonia }
 		position = 10
 		trigger = {
 			owns = 33
@@ -347,6 +347,20 @@ sca_diplomacy_and_trade = {
 		}
 		position = 8
 		trigger = {
+			OR = {
+				45 = { #Lubeck
+					trade_share = {
+						country = ROOT
+						share = 75
+					}
+				}
+				1926 = { #Baltic Sea
+					trade_share = {
+						country = ROOT
+						share = 75
+					}
+				}
+			}
 		}
 		effect = {
 			add_country_modifier = {
