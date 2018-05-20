@@ -1,0 +1,125 @@
+sca_empire = {
+	slot = 1 #upper left column
+	generic = no
+	ai = yes
+	potential = {
+		tag = SCA
+	}
+	has_country_shield = yes
+
+	integrate_finland = {
+		icon = mission_assemble_an_army
+		required_missions = { } #None
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		trigger = {
+			owns = 19
+			owns = 27
+			owns = 28
+			owns = 29
+			owns = 30
+			owns = 31
+			owns = 32
+			owns = 309
+			owns = 1776
+			owns = 1777
+			owns = 4123
+			owns = 4124
+			owns = 4152
+		}
+		effect = {
+			add_country_modifier = {
+				name = "finland_reclaimed_modifier"
+				duration = -1
+			}
+		}
+	}
+	integrate_norway = {
+		icon = mission_unite_home_region
+		required_missions = { integrate_finland }
+		position = 2
+		trigger = {
+			owns = 17
+			owns = 20
+			owns = 21
+			owns = 22
+			owns = 23
+			owns = 24
+			owns = 315
+			owns = 370
+			owns = 371
+			owns = 2752
+			owns = 4143
+			owns = 4144
+			owns = 4145
+		}
+		effect = {
+			add_country_modifier = {
+				name = "norway_reclaimed_modifier"
+				duration = -1
+			}
+		}
+	}
+	integrate_pommerania = {
+		icon = mission_unite_home_region
+		required_missions = { integrate_norway }
+		position = 3
+		trigger = {
+			owns = 40
+			owns = 41
+			owns = 42
+			owns = 43
+			owns = 45
+			owns = 46
+			owns = 47
+			owns = 48
+			owns = 767
+			owns = 1841
+			owns = 1858
+			owns = 2958
+			owns = 2993
+			owns = 2994
+			owns = 2995
+			owns = 2996
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pommerania_reclaimed_modifier"
+				duration = -1
+			}
+		}
+	}
+	integrate_estonia = {
+		icon = mission_unite_home_region
+		required_missions = { integrate_pommerania }
+		position = 3
+		trigger = {
+			owns = 33
+			owns = 34
+			owns = 35
+			owns = 36
+			owns = 37
+			owns = 38
+			owns = 39
+			owns = 270
+			owns = 271
+			owns = 273
+			owns = 1834
+			owns = 1842
+			owns = 1935
+			owns = 1936
+			owns = 1961
+			owns = 4241
+		}
+		effect = {
+			add_country_modifier = {
+				name = "scandinavia_reunited_modifier"
+				duration = -1
+			}
+		}
+	}
+}

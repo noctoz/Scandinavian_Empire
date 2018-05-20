@@ -1,0 +1,26 @@
+#Akershus, incl. Oslo (Christiania), Tönsberg
+ 
+owner = NOR
+controller = NOR
+add_core = NOR
+culture = norwegian
+religion = norse_pagan_reformed
+hre = no
+base_tax = 8
+base_production = 9
+trade_goods = fish
+base_manpower = 4
+capital = "Oslo"
+is_city = yes
+fort_15th = yes
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+add_permanent_province_modifier = {
+	name = center_of_trade_modifier
+	duration = -1
+}
+
+1630.1.1 = { trade_goods = naval_supplies } # Approximate date

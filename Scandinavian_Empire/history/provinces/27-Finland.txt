@@ -1,0 +1,16 @@
+#Finland, incl. Åbo.
+
+owner = FIN
+controller = FIN
+add_core = FIN
+culture = finnish
+religion = norse_pagan_reformed
+hre = no
+base_tax = 5 
+base_production = 4
+trade_goods = grain
+base_manpower = 3
+capital = "Åbo"
+is_city = yes
+discovered_by = western
+discovered_by = eastern

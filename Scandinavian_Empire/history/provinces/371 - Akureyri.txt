@@ -1,0 +1,18 @@
+#371 - Akureyri
+
+owner = NOR
+controller = NOR
+add_core = NOR 
+culture = norwegian
+religion = norse_pagan_reformed
+hre = no
+base_tax = 1 
+base_production = 1
+trade_goods = fish
+base_manpower = 1
+capital = "Akureyri"
+is_city = yes
+
+discovered_by = western
+
+1752.1.1 = { trade_goods = wool } # Wool becomes more important.

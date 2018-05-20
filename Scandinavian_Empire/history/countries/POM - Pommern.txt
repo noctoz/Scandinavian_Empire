@@ -1,0 +1,25 @@
+# Pomerania
+government = feudal_monarchy
+government_rank = 2
+technology_group = western
+primary_culture = pommeranian
+religion = norse_pagan_reformed
+clear_scripted_personalities = yes
+capital = 1858 # Stettin
+1430.8.3 = {
+	monarch = {
+		name = "Folki"
+		birth_date = 1398.7.15
+		dynasty = "af Munsö"
+		adm = 5
+		dip = 2
+		mil = 3
+	}
+	add_ruler_personality = tactical_genius_personality
+	add_ruler_personality = martial_educator_personality
+}
+1444.11.11 = {
+	capital = 1858
+	add_treasury = 65
+	add_prestige = 4269
+}

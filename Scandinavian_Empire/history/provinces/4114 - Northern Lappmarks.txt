@@ -1,0 +1,23 @@
+#Lapland, the far north wastelands.
+
+owner = SCA
+controller = SCA
+add_core = SCA
+capital = "Kiruna"
+culture = swedish
+religion = norse_pagan_reformed
+hre = no
+base_tax = 1 
+base_production = 4
+trade_goods = iron
+base_manpower = 1
+discovered_by = eastern
+discovered_by = western
+
+add_permanent_province_modifier = {
+	name = kirunavaara_modifier
+	duration = -1
+	desc = desc_kirunavaara_modifier
+}
+
+

@@ -1,0 +1,18 @@
+#Kola
+
+owner = FIN
+controller = FIN 
+capital = "Kola"
+culture = finnish
+religion = norse_pagan_reformed
+hre = no
+add_core = FIN
+base_tax = 1 
+base_production = 1
+is_city = yes
+trade_goods = fur
+base_manpower = 2
+fort_15th = yes
+
+discovered_by = western
+discovered_by = eastern

@@ -1,0 +1,23 @@
+#Östergötland, contains Norrköping, Linköping etc.
+
+add_core = SCA
+owner = SCA
+controller = SCA
+culture = swedish
+religion = norse_pagan_reformed
+hre = no
+base_tax = 9
+base_production = 6
+trade_goods = grain
+base_manpower = 3
+capital = "Linköping"
+is_city = yes # Estimate
+estate = estate_church
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+
+1487.1.1 = { revolt = { type = revolutionary_rebels size = 2 } controller = REB } # The Axelsson Tott Family
+1487.5.24 = { revolt = {} controller = SWE } # The Demise of the Axelsson Tott Family

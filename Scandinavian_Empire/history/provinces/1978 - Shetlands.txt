@@ -1,0 +1,25 @@
+#1978 - Shetlands
+
+owner = SCA
+controller = SCA
+culture = norwegian
+religion = norse_pagan_reformed
+hre = no
+base_tax = 1 
+base_production = 1
+trade_goods = fish
+base_manpower = 4
+capital = "Lerwick"
+is_city = yes # Estimated
+add_core = SCA
+fort_15th = yes
+add_permanent_province_modifier = {
+	name = seat_of_jomsvikings_modifier
+	duration = -1
+	desc = desc_seat_of_jomsvikings_modifier
+}
+
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern

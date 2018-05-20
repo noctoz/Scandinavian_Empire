@@ -1,0 +1,22 @@
+#Jämtland+Härjedalen
+
+owner = SCA
+controller = SCA
+culture = swedish
+religion = norse_pagan_reformed
+hre = no
+base_tax = 2 
+base_production = 2
+trade_goods = fur
+base_manpower = 2
+capital = "Frösön"
+is_city = yes
+add_core = SCA
+
+discovered_by = eastern
+discovered_by = western
+
+1531.11.5 = { unrest = 10 } # The Return of Christian II
+1532.7.15 = { unrest = 0 } # The Capture of Christian II
+1550.1.1 = { trade_goods = paper }
+1786.10.23 = { capital = "Östersund" }

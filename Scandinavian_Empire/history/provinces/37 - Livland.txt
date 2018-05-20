@@ -1,0 +1,16 @@
+#273 - Livland
+
+owner = EST
+controller = EST
+culture = estonian
+religion = norse_pagan_reformed
+capital = "Fellin"
+trade_goods = livestock
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 3
+is_city = yes
+add_core = EST
+discovered_by = western
+discovered_by = eastern

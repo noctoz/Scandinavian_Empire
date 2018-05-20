@@ -1,0 +1,25 @@
+# Visby
+government = oligarchic_republic
+government_rank = 1
+technology_group = western
+primary_culture = swedish
+religion = norse_pagan_reformed
+clear_scripted_personalities = yes
+capital = 25
+1433.8.2 = {
+	monarch = {
+		name = "Hroðgar"
+		birth_date = 1383.1.24
+		dynasty = "af Visby"
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+	add_ruler_personality = navigator_personality
+	add_ruler_personality = scholar_personality
+}
+1444.11.11 = {
+	capital = 25
+	add_treasury = 161
+	add_prestige = 648
+}

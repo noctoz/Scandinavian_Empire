@@ -1,0 +1,35 @@
+# Westfriesland
+government = despotic_monarchy
+government_rank = 1
+technology_group = western
+primary_culture = danish
+religion = norse_pagan_reformed
+clear_scripted_personalities = yes
+capital = 97
+1439.4.6 = {
+	monarch = {
+		name = "Rögnvaldr"
+		birth_date = 1420.10.18
+		dynasty = "af Orkneyjar"
+		adm = 0
+		dip = 1
+		mil = 3
+	}
+	add_ruler_personality = bold_fighter_personality
+	heir = {
+		name = "Karl"
+		monarch_name = "Karl"
+		dynasty = "af Orkneyjar"
+		birth_date = 1438.12.7
+		death_date = 1518.12.7
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+	add_heir_personality = navigator_personality
+}
+1444.11.11 = {
+	capital = 97
+	add_treasury = 46
+	add_prestige = 260
+}

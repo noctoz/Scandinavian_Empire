@@ -1,0 +1,17 @@
+#Nyland, incl. Raseborg, Borgå, Helsingfors.
+
+owner = FIN
+controller = FIN
+add_core = FIN
+culture = finnish
+religion = norse_pagan_reformed
+hre = no
+base_tax = 5 
+base_production = 3
+trade_goods = naval_supplies
+base_manpower = 3
+capital = "Borgå"
+is_city = yes
+
+discovered_by = western
+discovered_by = eastern

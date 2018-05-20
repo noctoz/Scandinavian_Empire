@@ -1,0 +1,18 @@
+#Eastern Skåne - More or less Kristianstad Län. Includes Göinge, Gladsax Len, Listerlandet, and others.
+
+add_core = SCA
+owner = SCA
+controller = SCA
+culture = danish
+religion = norse_pagan_reformed
+hre = no
+base_tax = 8
+base_production = 8
+trade_goods = livestock
+base_manpower = 5
+capital = "Gladsax"
+is_city = yes
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman

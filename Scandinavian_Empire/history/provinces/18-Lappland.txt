@@ -1,0 +1,18 @@
+#Ume, Åsele, Piteå Lappmarks
+
+owner = SCA
+controller = SCA
+add_core = SCA
+capital = "Arvidsjaur"
+culture = swedish
+religion = norse_pagan_reformed
+hre = no
+base_tax = 1 
+base_production = 1
+trade_goods = fur
+base_manpower = 1
+
+discovered_by = eastern
+discovered_by = western
+
+1580.1.1 = { trade_goods = paper }

@@ -1,0 +1,25 @@
+# Holstein
+government = despotic_monarchy
+government_rank = 1
+technology_group = western
+primary_culture = danish
+religion = norse_pagan_reformed
+clear_scripted_personalities = yes
+capital = 44 # Hamburg
+1426.6.24 = {
+	monarch = {
+		name = "Freyr"
+		birth_date = 1382.2.1
+		dynasty = "af Munsö"
+		adm = 2
+		dip = 5
+		mil = 2
+	}
+	add_ruler_personality = silver_tongue_personality
+	add_ruler_personality = secretive_personality
+}
+1444.11.11 = {
+	capital = 44
+	add_treasury = 57
+	add_prestige = 3994
+}

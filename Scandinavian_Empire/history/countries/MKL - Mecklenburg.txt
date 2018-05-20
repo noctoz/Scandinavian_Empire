@@ -1,0 +1,25 @@
+# Mecklenburg
+government = despotic_monarchy
+government_rank = 1
+technology_group = western
+primary_culture = swedish
+religion = norse_pagan_reformed
+clear_scripted_personalities = yes
+capital = 46 # Rostock
+1431.6.4 = {
+	monarch = {
+		name = "Oddr II"
+		birth_date = 1430.12.5
+		dynasty = "af Munsö"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+	add_ruler_personality = navigator_personality
+	add_ruler_personality = craven_personality
+}
+1444.11.11 = {
+	capital = 46
+	add_treasury = 56
+	add_prestige = 3494
+}

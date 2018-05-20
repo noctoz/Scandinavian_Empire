@@ -1,0 +1,16 @@
+#Hälsingland-Gästrikland-Medelpad, from Gävle to Näs
+
+add_core = SCA
+owner = SCA
+controller = SCA
+culture = swedish
+religion = norse_pagan_reformed
+hre = no
+base_tax = 5 
+base_production = 5
+trade_goods = fish
+base_manpower = 2
+capital = "Gävle"
+is_city = yes
+discovered_by = eastern
+discovered_by = western

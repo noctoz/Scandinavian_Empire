@@ -1,0 +1,21 @@
+#Marienburg
+
+owner = POM
+controller = POM
+capital = "Marienburg"
+culture = pommeranian
+religion = norse_pagan_reformed
+trade_goods = naval_supplies
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 6
+is_city = yes
+add_core = POM
+fort_15th = yes
+
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman

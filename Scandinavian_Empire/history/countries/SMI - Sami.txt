@@ -1,0 +1,25 @@
+# Kola
+government = despotic_monarchy
+government_rank = 1
+technology_group = western
+primary_culture = swedish
+religion = norse_pagan_reformed
+clear_scripted_personalities = yes
+capital = 4113
+1426.9.28 = {
+	monarch = {
+		name = "Eskild II"
+		birth_date = 1421.1.11
+		dynasty = "af Munsö"
+		adm = 3
+		dip = 1
+		mil = 4
+	}
+	add_ruler_personality = scholar_personality
+	add_ruler_personality = careful_personality
+}
+1444.11.11 = {
+	capital = 4113
+	add_treasury = 13
+	add_prestige = 3299
+}

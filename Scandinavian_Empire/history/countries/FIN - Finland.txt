@@ -1,0 +1,25 @@
+# Finland
+government = feudal_monarchy
+government_rank = 2
+technology_group = western
+primary_culture = finnish
+religion = norse_pagan_reformed
+clear_scripted_personalities = yes
+capital = 33 # Neva
+1440.2.17 = {
+	monarch = {
+		name = "Vigdis"
+		birth_date = 1428.3.27
+		dynasty = "af Munsö"
+		female = yes
+		adm = 3
+		dip = 5
+		mil = 3
+	}
+	add_ruler_personality = navigator_personality
+}
+1444.11.11 = {
+	capital = 27
+	add_treasury = 3
+	add_prestige = 3469
+}

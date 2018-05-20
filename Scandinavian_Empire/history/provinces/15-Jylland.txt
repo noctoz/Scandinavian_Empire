@@ -1,0 +1,19 @@
+#15 - Western Jutland, incl. Ribe and Ringkøbing
+
+owner = SCA
+controller = SCA
+add_core = SCA
+culture = danish
+religion = norse_pagan_reformed
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = livestock
+base_manpower = 6
+capital = "Ribe"
+is_city = yes
+estate = estate_nobles
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

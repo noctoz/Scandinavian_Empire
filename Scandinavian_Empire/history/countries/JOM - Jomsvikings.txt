@@ -1,0 +1,25 @@
+# Jomsvikings
+government = monastic_order_government
+government_rank = 1
+technology_group = western
+primary_culture = norwegian
+religion = norse_pagan_reformed
+clear_scripted_personalities = yes
+capital = 1978 # Shetlands
+1411.2.14 = {
+	monarch = {
+		name = "Botulfr"
+		birth_date = 1387.10.11
+		dynasty = "af Munsö"
+		adm = 3
+		dip = 0
+		mil = 6
+	}
+	add_ruler_personality = infertile_personality
+	add_ruler_personality = strict_personality
+}
+1444.11.11 = {
+	capital = 1978
+	add_treasury = 20
+	add_prestige = 3936
+}

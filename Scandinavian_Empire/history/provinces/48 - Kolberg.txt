@@ -1,0 +1,21 @@
+#48 - Kolberg
+
+owner = POM
+controller = POM
+add_core = POM
+culture = pommeranian
+religion = norse_pagan_reformed
+hre = no
+base_tax = 4 
+base_production = 1
+trade_goods = fish
+base_manpower = 5
+capital = "Kolberg"
+is_city = yes
+fort_15th = yes
+
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
