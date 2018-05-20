@@ -40,8 +40,11 @@ sca_empire = {
 	}
 	integrate_norway = {
 		icon = mission_unite_home_region
-		required_missions = { integrate_finland }
-		position = 2
+		required_missions = { 
+			securing_the_east
+			sca_vassal_opinion
+		}
+		position = 3
 		trigger = {
 			owns = 17
 			owns = 20
@@ -66,8 +69,11 @@ sca_empire = {
 	}
 	integrate_pommerania = {
 		icon = mission_unite_home_region
-		required_missions = { integrate_norway }
-		position = 3
+		required_missions = {
+			integrate_norway
+			great_scandinavian_fleet
+		}
+		position = 6
 		trigger = {
 			owns = 40
 			owns = 41
@@ -96,7 +102,7 @@ sca_empire = {
 	integrate_estonia = {
 		icon = mission_unite_home_region
 		required_missions = { integrate_pommerania }
-		position = 3
+		position = 7
 		trigger = {
 			owns = 33
 			owns = 34
@@ -119,6 +125,533 @@ sca_empire = {
 			add_country_modifier = {
 				name = "scandinavia_reunited_modifier"
 				duration = -1
+			}
+		}
+	}
+	conquer_alexandria = {
+		icon = mission_unite_home_region
+		required_missions = { integrate_pommerania }
+		position = 10
+		trigger = {
+			owns = 33
+			owns = 34
+			owns = 35
+			owns = 36
+			owns = 37
+			owns = 38
+			owns = 39
+			owns = 270
+			owns = 271
+			owns = 273
+			owns = 1834
+			owns = 1842
+			owns = 1935
+			owns = 1936
+			owns = 1961
+			owns = 4241
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = -1
+			}
+		}
+	}
+}
+
+fortifying_scandinavia = {
+	slot = 2 #upper left column
+	generic = no
+	ai = yes
+	potential = {
+		tag = SCA
+	}
+	has_country_shield = yes
+	
+	we_need_leaders = {
+		icon = mission_unite_home_region
+		required_missions = { }
+		position = 1
+		trigger = {
+			num_of_generals = 2
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	securing_the_east = {
+		icon = mission_unite_home_region
+		required_missions = {
+			integrate_finland
+			we_need_leaders
+		}
+		position = 2
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	atlantic_ports = {
+		icon = mission_unite_home_region
+		required_missions = { integrate_norway }
+		position = 4
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	great_scandinavian_fleet = {
+		icon = mission_unite_home_region
+		required_missions = { atlantic_ports }
+		position = 5
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	sca_navy_tradition = {
+		icon = mission_unite_home_region
+		required_missions = { great_scandinavian_fleet }
+		position = 6
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	power_of_the_north = {
+		icon = mission_unite_home_region
+		required_missions = { integrate_estonia }
+		position = 8
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	sca_army_tradition = {
+		icon = mission_unite_home_region
+		required_missions = { power_of_the_north }
+		position = 9
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	sacking_constantinople = {
+		icon = mission_unite_home_region
+		required_missions = { sca_army_tradition }
+		position = 10
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+}
+
+sca_diplomacy_and_trade = {
+	slot = 3 #middle column
+	generic = no
+	ai = yes
+	potential = {
+		tag = SCA
+	}
+	has_country_shield = yes
+	
+	sca_vassal_opinion = {
+		icon = mission_unite_home_region
+		required_missions = { }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	sca_and_lit = {
+		icon = mission_unite_home_region
+		required_missions = { sca_vassal_opinion }
+		position = 3
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	allied_with_great_power = {
+		icon = mission_unite_home_region
+		required_missions = { sca_and_lit }
+		position = 4
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	create_sca_trade_fleet = {
+		icon = mission_unite_home_region
+		required_missions = { integrate_pommerania }
+		position = 7
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	sca_dominating_trade = {
+		icon = mission_unite_home_region
+		required_missions = {
+			create_sca_trade_fleet
+			sca_build_markets
+		}
+		position = 8
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	sca_trade_value = {
+		icon = mission_unite_home_region
+		required_missions = {
+			sca_dominating_trade
+			sca_build_manufactories
+		}
+		position = 9
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	sca_most_valuable_trade_node = {
+		icon = mission_unite_home_region
+		required_missions = { sca_trade_value }
+		position = 10
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+}
+
+developing_scandinavia = {
+	slot = 4 #upper left column
+	generic = no
+	ai = yes
+	potential = {
+		tag = SCA
+	}
+	has_country_shield = yes
+	
+	ore_is_our_core = {
+		icon = mission_unite_home_region
+		required_missions = { }
+		position = 1
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	sca_build_temples = {
+		icon = mission_unite_home_region
+		required_missions = { ore_is_our_core }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	sca_build_workshops = {
+		icon = mission_unite_home_region
+		required_missions = { sca_build_temples }
+		position = 3
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	sca_build_markets = {
+		icon = mission_unite_home_region
+		required_missions = {
+			sca_build_workshops
+			integrate_pommerania
+		}
+		position = 7
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	sca_build_manufactories = {
+		icon = mission_unite_home_region
+		required_missions = { sca_build_markets }
+		position = 8
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	sca_build_universities = {
+		icon = mission_unite_home_region
+		required_missions = { sca_build_manufactories }
+		position = 9
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	develop_great_cities = {
+		icon = mission_unite_home_region
+		required_missions = { sca_build_universities }
+		position = 10
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+}
+
+sca_in_the_new_world = {
+	slot = 5 #upper left column
+	generic = no
+	ai = yes
+	potential = {
+		tag = SCA
+	}
+	has_country_shield = yes
+	
+	sca_discover_greenland = {
+		icon = mission_unite_home_region
+		required_missions = { }
+		position = 1
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	sca_discover_canada = {
+		icon = mission_unite_home_region
+		required_missions = { sca_discover_greenland }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	sca_colonize_canada = {
+		icon = mission_unite_home_region
+		required_missions = { sca_discover_canada }
+		position = 3
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	establish_new_sweden = {
+		icon = mission_unite_home_region
+		required_missions = { sca_colonize_canada }
+		position = 4
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	luxuries_for_the_elite = {
+		icon = mission_unite_home_region
+		required_missions = { }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				province_id = 493
+				province_id = 494
+				province_id = 495
+				province_id = 496
+				province_id = 497
+				province_id = 498
+				province_id = 499
+				province_id = 500
+				province_id = 501
+				province_id = 1881
+			}
+		}
+		trigger = {
+			OR = {
+				sugar = 1
+				coffee = 1
+				tobacco = 1
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	increased_demand_for_luxuries = {
+		icon = mission_unite_home_region
+		required_missions = { luxuries_for_the_elite }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				province_id = 493
+				province_id = 494
+				province_id = 495
+				province_id = 496
+				province_id = 497
+				province_id = 498
+				province_id = 499
+				province_id = 500
+				province_id = 501
+				province_id = 1881
+			}
+		}
+		trigger = {
+			OR = {
+				AND = {
+					sugar = 1
+					coffee = 1
+				}
+				AND = {
+					sugar = 1
+					tobacco = 1
+				}
+				AND = {
+					tobacco = 1
+					coffee = 1
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
+			}
+		}
+	}
+	only_the_best = {
+		icon = mission_unite_home_region
+		required_missions = { increased_demand_for_luxuries }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				province_id = 493
+				province_id = 494
+				province_id = 495
+				province_id = 496
+				province_id = 497
+				province_id = 498
+				province_id = 499
+				province_id = 500
+				province_id = 501
+				province_id = 1881
+			}
+		}
+		trigger = {
+			sugar = 1
+			coffee = 1
+			tobacco = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 10
 			}
 		}
 	}
