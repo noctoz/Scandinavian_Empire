@@ -8,7 +8,7 @@ sca_empire = {
 	has_country_shield = yes
 
 	integrate_finland = {
-		icon = mission_assemble_an_army
+		icon = mission_unite_home_region
 		required_missions = { } #None
 		ai_weight = {
 			factor = 5
@@ -200,7 +200,7 @@ fortifying_scandinavia = {
 			1777 = { # Kola
 				fort_level = 1
 			}
-			army_size_percentage = 0.9
+			army_size_percentage = 1
 		}
 		effect = {
 			add_country_modifier = {
@@ -233,7 +233,7 @@ fortifying_scandinavia = {
 		required_missions = { atlantic_ports }
 		position = 5
 		trigger = {
-			navy_size_percentage = 0.8
+			navy_size_percentage = 1
 		}
 		effect = {
 			add_country_modifier = {
@@ -247,7 +247,7 @@ fortifying_scandinavia = {
 		required_missions = { great_scandinavian_fleet }
 		position = 6
 		trigger = {
-			navy_tradition = 75
+			navy_tradition = 50
 		}
 		effect = {
 			add_country_modifier = {
@@ -261,7 +261,7 @@ fortifying_scandinavia = {
 		required_missions = { integrate_estonia }
 		position = 8
 		trigger = {
-			army_size = 100
+			army_size = 200
 			artillery_fraction = 0.1
 			33 = { # Neva
 				fort_level = 1
@@ -285,7 +285,7 @@ fortifying_scandinavia = {
 		required_missions = { power_of_the_north }
 		position = 9
 		trigger = {
-			army_tradition = 75
+			army_tradition = 50
 		}
 		effect = {
 			add_country_modifier = {
@@ -298,6 +298,9 @@ fortifying_scandinavia = {
 		icon = mission_war_chest
 		required_missions = { sca_army_tradition }
 		position = 10
+		provinces_to_highlight = {
+			province_id = 151
+		}
 		trigger = {
 			controls = 151
 		}
@@ -351,6 +354,7 @@ sca_diplomacy_and_trade = {
 		required_missions = { sca_vassal_opinion }
 		position = 3
 		trigger = {
+			alliance_with = LIT
 		}
 		effect = {
 			add_country_modifier = {
@@ -383,7 +387,7 @@ sca_diplomacy_and_trade = {
 		required_missions = { integrate_pommerania }
 		position = 7
 		trigger = {
-			num_of_light_ship = 30
+			num_of_light_ship = 40
 		}
 		effect = {
 			add_country_modifier = {
@@ -606,7 +610,16 @@ sca_in_the_new_world = {
 		icon = mission_colonial
 		required_missions = { }
 		position = 1
+		provinces_to_highlight = {
+			area = greenland_area
+		} 
 		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = sca_discover_greenland
+				greenland_area = {
+					has_discovered = ROOT
+				}
+			}
 		}
 		effect = {
 			add_country_modifier = {
@@ -619,7 +632,16 @@ sca_in_the_new_world = {
 		icon = mission_colonial
 		required_missions = { sca_discover_greenland }
 		position = 2
+		provinces_to_highlight = {
+			colonial_region = colonial_canada
+		}
 		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = sca_discover_canada
+				colonial_canada = {
+					has_discovered = ROOT
+				}
+			}
 		}
 		effect = {
 			add_country_modifier = {
@@ -632,7 +654,18 @@ sca_in_the_new_world = {
 		icon = mission_colonial
 		required_missions = { sca_discover_canada }
 		position = 3
+		provinces_to_highlight = {
+			colonial_region = colonial_canada
+		}
 		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = sca_colony_in_canada
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 1
+					colonial_region = colonial_canada
+					is_city = yes
+				}
+			}
 		}
 		effect = {
 			add_country_modifier = {
@@ -641,11 +674,22 @@ sca_in_the_new_world = {
 			}
 		}
 	}
-	establish_new_sweden = {
+	establish_vinland = {
 		icon = mission_colonial
 		required_missions = { sca_colonize_canada }
 		position = 4
+		provinces_to_highlight = {
+			colonial_region = colonial_canada
+		}
 		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = sca_create_vinland
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					colonial_region = colonial_canada
+					is_city = yes
+				}
+			}
 		}
 		effect = {
 			add_country_modifier = {
