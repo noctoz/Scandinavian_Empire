@@ -12,8 +12,6 @@ trade_goods = fur
 base_manpower = 5
 capital = "Nöteborg"
 is_city = yes
-fort_15th = yes
-
 
 discovered_by = western
 discovered_by = eastern

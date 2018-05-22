@@ -6,7 +6,6 @@ add_core = EST
 culture = estonian
 religion = norse_pagan_reformed
 capital = "Dünaburg"
-fort_15th = yes #Dünaburg
 trade_goods = livestock
 hre = no
 base_tax = 3 

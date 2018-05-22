@@ -16,6 +16,9 @@ sca_empire = {
 		ai_priority = {
 			factor = 5
 		}
+		provinces_to_highlight = {
+			owned_by = FIN
+		}
 		trigger = {
 			owns = 19
 			owns = 27
@@ -45,6 +48,9 @@ sca_empire = {
 			sca_vassal_opinion
 		}
 		position = 3
+		provinces_to_highlight = {
+			owned_by = NOR
+		}
 		trigger = {
 			owns = 17
 			owns = 20
@@ -74,6 +80,9 @@ sca_empire = {
 			great_scandinavian_fleet
 		}
 		position = 6
+		provinces_to_highlight = {
+			owned_by = POM
+		}
 		trigger = {
 			owns = 40
 			owns = 41
@@ -103,6 +112,9 @@ sca_empire = {
 		icon = mission_unite_home_region
 		required_missions = { integrate_pommerania }
 		position = 7
+		provinces_to_highlight = {
+			owned_by = EST
+		}
 		trigger = {
 			owns = 33
 			owns = 34
@@ -128,32 +140,24 @@ sca_empire = {
 			}
 		}
 	}
-	conquer_alexandria = {
-		icon = mission_unite_home_region
+	conquer_russia = {
+		icon = mission_conquer_50_development
 		required_missions = { integrate_estonia }
 		position = 10
+		provinces_to_highlight = {
+			region = russia_region
+		}
 		trigger = {
-			owns = 33
-			owns = 34
-			owns = 35
-			owns = 36
-			owns = 37
-			owns = 38
-			owns = 39
-			owns = 270
-			owns = 271
-			owns = 273
-			owns = 1834
-			owns = 1842
-			owns = 1935
-			owns = 1936
-			owns = 1961
-			owns = 4241
+			russia_region = {
+				type = all
+				owned_by = ROOT
+			}
 		}
 		effect = {
+			add_prestige = 50 
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = -1
+				name = "russian_integration"
+				duration = 9125 #25 years
 			}
 		}
 	}
@@ -169,7 +173,7 @@ fortifying_scandinavia = {
 	has_country_shield = yes
 	
 	we_need_leaders = {
-		icon = mission_unite_home_region
+		icon = mission_build_up_to_force_limit
 		required_missions = { }
 		position = 1
 		trigger = {
@@ -177,103 +181,129 @@ fortifying_scandinavia = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "standardized_uniforms_modifier"
+				duration = 9125 #25 years
 			}
 		}
 	}
 	securing_the_east = {
-		icon = mission_unite_home_region
+		icon = mission_build_up_to_force_limit
 		required_missions = {
 			integrate_finland
 			we_need_leaders
 		}
 		position = 2
 		trigger = {
+			309 = { # Olonets
+				fort_level = 1
+			}
+			1777 = { # Kola
+				fort_level = 1
+			}
+			army_size_percentage = 0.9
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "thriving_arms_industry"
+				duration = 9125 #25 years
 			}
 		}
 	}
 	atlantic_ports = {
-		icon = mission_unite_home_region
+		icon = mission_establish_high_seas_navy
 		required_missions = { integrate_norway }
 		position = 4
 		trigger = {
+			16 = { # Bohuslän
+				has_building = shipyard
+			}
+			17 = { # Akershus
+				has_building = shipyard
+			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "western_naval_influence"
+				duration = 18250 #50 years
 			}
 		}
 	}
 	great_scandinavian_fleet = {
-		icon = mission_unite_home_region
+		icon = mission_establish_high_seas_navy
 		required_missions = { atlantic_ports }
 		position = 5
 		trigger = {
+			navy_size_percentage = 0.8
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "thriving_ship_building_sector"
+				duration = 9125 #25 years
 			}
 		}
 	}
 	sca_navy_tradition = {
-		icon = mission_unite_home_region
+		icon = mission_establish_high_seas_navy
 		required_missions = { great_scandinavian_fleet }
 		position = 6
 		trigger = {
+			navy_tradition = 75
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "naval_enthusiasm_mission"
+				duration = 9125 #25 years
 			}
 		}
 	}
 	power_of_the_north = {
-		icon = mission_unite_home_region
+		icon = mission_assemble_an_army
 		required_missions = { integrate_estonia }
 		position = 8
 		trigger = {
+			army_size = 100
+			artillery_fraction = 0.1
+			33 = { # Neva
+				fort_level = 1
+			}
+			273 = { # Latgalia
+				fort_level = 1
+			}
+			2958 = { # Osterode
+				fort_level = 1
+			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "morale_boost"
+				duration = 9125 #25 years
 			}
 		}
 	}
 	sca_army_tradition = {
-		icon = mission_unite_home_region
+		icon = mission_assemble_an_army
 		required_missions = { power_of_the_north }
 		position = 9
 		trigger = {
+			army_tradition = 75
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "army_enthusiasm"
+				duration = 9125 #25 years
 			}
 		}
 	}
 	sacking_constantinople = {
-		icon = mission_unite_home_region
+		icon = mission_war_chest
 		required_missions = { sca_army_tradition }
 		position = 10
 		trigger = {
+			controls = 151
 		}
 		effect = {
-			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
-			}
+			add_prestige = 50
+			add_years_of_income = 5
 		}
 	}
 }
@@ -288,41 +318,63 @@ sca_diplomacy_and_trade = {
 	has_country_shield = yes
 	
 	sca_vassal_opinion = {
-		icon = mission_unite_home_region
+		icon = mission_have_two_subjects
 		required_missions = { }
 		position = 2
 		trigger = {
+			reverse_has_opinion = {
+				who = NOR
+				value = 180
+			}
+			reverse_has_opinion = {
+				who = FIN
+				value = 180
+			}
+			reverse_has_opinion = {
+				who = POM
+				value = 180
+			}
+			reverse_has_opinion = {
+				who = EST
+				value = 180
+			}
 		}
-		effect = {
+		effect = { 
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "obedient_subjects"
+				duration = 9125 #25 years
 			}
 		}
 	}
 	sca_and_lit = {
-		icon = mission_unite_home_region
+		icon = mission_alliances
 		required_missions = { sca_vassal_opinion }
 		position = 3
 		trigger = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "influential_diplomacy"
+				duration = 3650 # 10 years
 			}
 		}
 	}
-	allied_with_great_power = {
-		icon = mission_unite_home_region
+	sca_powerful_allies = {
+		icon = mission_alliances
 		required_missions = { sca_and_lit }
 		position = 4
 		trigger = {
+			OR = {
+				alliance_with = FRA
+				alliance_with = ENG
+				alliance_with = GBR
+				alliance_with = SPA
+			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "influential_diplomacy"
+				duration = 9125 #25 years
 			}
 		}
 	}
@@ -331,16 +383,17 @@ sca_diplomacy_and_trade = {
 		required_missions = { integrate_pommerania }
 		position = 7
 		trigger = {
+			num_of_light_ship = 30
 		}
 		effect = {
 			add_country_modifier = {
 				name = "baltic_ambition_new"
-				duration = 10
+				duration = 9125 #25 years
 			}
 		}
 	}
 	sca_dominating_trade = {
-		icon = mission_unite_home_region
+		icon = mission_dominate_home_trade_node
 		required_missions = {
 			create_sca_trade_fleet
 			sca_build_markets
@@ -364,13 +417,13 @@ sca_diplomacy_and_trade = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "gen_eur_trade_node_mod"
+				duration = 9125 #25 years
 			}
 		}
 	}
 	sca_trade_value = {
-		icon = mission_unite_home_region
+		icon = mission_dominate_home_trade_node
 		required_missions = {
 			sca_dominating_trade
 			sca_build_manufactories
@@ -380,21 +433,56 @@ sca_diplomacy_and_trade = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "business_booming "
+				duration = 9125 #25 years
 			}
 		}
 	}
 	sca_most_valuable_trade_node = {
-		icon = mission_unite_home_region
+		icon = mission_dominate_home_trade_node
 		required_missions = { sca_trade_value }
 		position = 10
 		trigger = {
+			OR = {
+				45 = { #Lubeck
+					highest_value_trade_node = yes
+					is_strongest_trade_power = ROOT
+				}
+				1926 = { #Baltic Sea
+					highest_value_trade_node = yes
+					is_strongest_trade_power = ROOT
+				}
+			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+			add_prestige = 30
+			if = {
+				limit = {
+					45 = { #Lubeck
+						highest_value_trade_node = yes
+						is_strongest_trade_power = ROOT
+					}
+				}
+				45 = {
+					add_province_modifier = {
+						name = "dominant_trade_hub"
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = {
+					1926 = { #Lubeck
+						highest_value_trade_node = yes
+						is_strongest_trade_power = ROOT
+					}
+				}
+				1 = { # Stockholm
+					add_province_modifier = {
+						name = "dominant_trade_hub"
+						duration = -1
+					}
+				}
 			}
 		}
 	}
@@ -410,7 +498,7 @@ developing_scandinavia = {
 	has_country_shield = yes
 	
 	ore_is_our_core = {
-		icon = mission_unite_home_region
+		icon = mission_high_income
 		required_missions = { }
 		position = 1
 		trigger = {
@@ -423,7 +511,7 @@ developing_scandinavia = {
 		}
 	}
 	sca_build_temples = {
-		icon = mission_unite_home_region
+		icon = mission_early_game_buildings
 		required_missions = { ore_is_our_core }
 		position = 2
 		trigger = {
@@ -436,7 +524,7 @@ developing_scandinavia = {
 		}
 	}
 	sca_build_workshops = {
-		icon = mission_unite_home_region
+		icon = mission_early_game_buildings
 		required_missions = { sca_build_temples }
 		position = 3
 		trigger = {
@@ -449,7 +537,7 @@ developing_scandinavia = {
 		}
 	}
 	sca_build_markets = {
-		icon = mission_unite_home_region
+		icon = mission_early_game_buildings
 		required_missions = {
 			sca_build_workshops
 			integrate_pommerania
@@ -465,7 +553,7 @@ developing_scandinavia = {
 		}
 	}
 	sca_build_manufactories = {
-		icon = mission_unite_home_region
+		icon = mission_have_manufactories
 		required_missions = { sca_build_markets }
 		position = 8
 		trigger = {
@@ -491,7 +579,7 @@ developing_scandinavia = {
 		}
 	}
 	develop_great_cities = {
-		icon = mission_unite_home_region
+		icon = mission_empire
 		required_missions = { sca_build_universities }
 		position = 10
 		trigger = {
@@ -515,7 +603,7 @@ sca_in_the_new_world = {
 	has_country_shield = yes
 	
 	sca_discover_greenland = {
-		icon = mission_unite_home_region
+		icon = mission_colonial
 		required_missions = { }
 		position = 1
 		trigger = {
@@ -528,7 +616,7 @@ sca_in_the_new_world = {
 		}
 	}
 	sca_discover_canada = {
-		icon = mission_unite_home_region
+		icon = mission_colonial
 		required_missions = { sca_discover_greenland }
 		position = 2
 		trigger = {
@@ -541,7 +629,7 @@ sca_in_the_new_world = {
 		}
 	}
 	sca_colonize_canada = {
-		icon = mission_unite_home_region
+		icon = mission_colonial
 		required_missions = { sca_discover_canada }
 		position = 3
 		trigger = {
@@ -554,7 +642,7 @@ sca_in_the_new_world = {
 		}
 	}
 	establish_new_sweden = {
-		icon = mission_unite_home_region
+		icon = mission_colonial
 		required_missions = { sca_colonize_canada }
 		position = 4
 		trigger = {
@@ -567,7 +655,7 @@ sca_in_the_new_world = {
 		}
 	}
 	luxuries_for_the_elite = {
-		icon = mission_unite_home_region
+		icon = mission_trade_company_region_abroad
 		required_missions = { }
 		position = 5
 		provinces_to_highlight = {
@@ -599,7 +687,7 @@ sca_in_the_new_world = {
 		}
 	}
 	increased_demand_for_luxuries = {
-		icon = mission_unite_home_region
+		icon = mission_trade_company_region_abroad
 		required_missions = { luxuries_for_the_elite }
 		position = 6
 		provinces_to_highlight = {
@@ -640,7 +728,7 @@ sca_in_the_new_world = {
 		}
 	}
 	only_the_best = {
-		icon = mission_unite_home_region
+		icon = mission_trade_company_region_abroad
 		required_missions = { increased_demand_for_luxuries }
 		position = 7
 		provinces_to_highlight = {

@@ -12,7 +12,5 @@ base_production = 1
 is_city = yes
 trade_goods = fur
 base_manpower = 2
-fort_15th = yes
-
 discovered_by = western
 discovered_by = eastern
