@@ -8,3 +8,4 @@ Contains:
 - The baltic area is owned by Estone, another of the vassals
 - Finland has expanded its borders a bit into Russia
 - Bonuses to certain key provinces from the CK2 playthrough that inspired this
+- All of Scandinavia as well as Lithuania follow the Norse faith
