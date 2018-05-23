@@ -59,3 +59,19 @@ pommerania_reclaimed_modifier = {
 scandinavia_reunited_modifier = {
 	max_states = 5
 }
+
+blessed_by_njord_modifier = {
+	allowed_num_of_buildings = 1
+	ship_recruit_speed = -0.25
+}
+
+blessed_by_freya_modifier = {
+	global_tax_modifier = 0.2
+	global_trade_power = 0.2
+}
+
+wood_industry_hub_modifier = {
+	local_tax_modifier = 0.15
+	local_development_cost = -0.10
+	local_build_cost = -0.25
+}

@@ -220,11 +220,28 @@ fortifying_scandinavia = {
 			17 = { # Akershus
 				has_building = shipyard
 			}
+			1984 = { #Nordjylland
+				has_building = shipyard
+			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = "western_naval_influence"
-				duration = 18250 #50 years
+			16 = { # Bohuslän
+				add_province_modifier = {
+					name = "blessed_by_njord_modifier"
+					duration = -1
+				}
+			}
+			17 = { # Akershus
+				add_province_modifier = {
+					name = "blessed_by_njord_modifier"
+					duration = -1
+				}
+			}
+			1984 = { #Nordjylland
+				add_province_modifier = {
+					name = "blessed_by_njord_modifier"
+					duration = -1
+				}
 			}
 		}
 	}
@@ -387,7 +404,7 @@ sca_diplomacy_and_trade = {
 		required_missions = { integrate_pommerania }
 		position = 7
 		trigger = {
-			num_of_light_ship = 40
+			num_of_light_ship = 50
 		}
 		effect = {
 			add_country_modifier = {
@@ -404,18 +421,16 @@ sca_diplomacy_and_trade = {
 		}
 		position = 8
 		trigger = {
-			OR = {
-				45 = { #Lubeck
-					trade_share = {
-						country = ROOT
-						share = 75
-					}
+			45 = { #Lubeck
+				trade_share = {
+					country = ROOT
+					share = 75
 				}
-				1926 = { #Baltic Sea
-					trade_share = {
-						country = ROOT
-						share = 75
-					}
+			}
+			1926 = { #Baltic Sea
+				trade_share = {
+					country = ROOT
+					share = 75
 				}
 			}
 		}
@@ -426,26 +441,13 @@ sca_diplomacy_and_trade = {
 			}
 		}
 	}
-	sca_trade_value = {
+	sca_most_valuable_trade_node = {
 		icon = mission_dominate_home_trade_node
 		required_missions = {
 			sca_dominating_trade
 			sca_build_manufactories
 		}
 		position = 9
-		trigger = {
-		}
-		effect = {
-			add_country_modifier = {
-				name = "business_booming "
-				duration = 9125 #25 years
-			}
-		}
-	}
-	sca_most_valuable_trade_node = {
-		icon = mission_dominate_home_trade_node
-		required_missions = { sca_trade_value }
-		position = 10
 		trigger = {
 			OR = {
 				45 = { #Lubeck
@@ -506,41 +508,109 @@ developing_scandinavia = {
 		required_missions = { }
 		position = 1
 		trigger = {
+			4 = { #Bergslagen
+				base_production = 6
+			}
+			1985 = { #Närke
+				base_production = 6
+			}
+			5 = { #Värmland
+				base_production = 6
+			}
+			4114 = { #Jokkmokk
+				base_production = 6
+			}
+			8 = { #Dalaskogen
+				base_production = 6
+			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+			4 = { #Bergslagen
+				add_province_modifier = {
+					name = "industrious_boost"
+					duration = -1
+				}
+			}
+			1985 = { #Närke
+				add_province_modifier = {
+					name = "industrious_boost"
+					duration = -1
+				}
+			}
+			5 = { #Värmland
+				add_province_modifier = {
+					name = "industrious_boost"
+					duration = -1
+				}
+			}
+			4114 = { #Jokkmokk
+				add_province_modifier = {
+					name = "industrious_boost"
+					duration = -1
+				}
+			}
+			8 = { #Dalaskogen
+				add_province_modifier = {
+					name = "industrious_boost"
+					duration = -1
+				}
 			}
 		}
 	}
-	sca_build_temples = {
+	sca_build_for_the_future = {
 		icon = mission_early_game_buildings
 		required_missions = { ore_is_our_core }
 		position = 2
 		trigger = {
+			1 = { #Stockholm
+				has_building = temple
+			}
+			2 = { #Östergötland
+				has_building = temple
+			}
+			7 = { #Skaraborg
+				has_building = temple
+			}
+			12 = { #Själland
+				has_building = marketplace
+			}
+			44 = { #Hamburg
+				has_building = marketplace
+			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "blessed_by_freya_modifier"
+				duration = 3650 # 10 years
 			}
 		}
 	}
 	sca_build_workshops = {
 		icon = mission_early_game_buildings
-		required_missions = { sca_build_temples }
+		required_missions = { sca_build_for_the_future }
 		position = 3
 		trigger = {
+			1 = { #Stockholm
+				has_building = workshop
+			}
+			8 = { #Dalaskogen
+				has_building = workshop
+			}
+			6 = { #Skåne
+				has_building = workshop
+			}
+			4114 = { #Jokkmokk
+				has_building = workshop
+			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "trade_income_increase"
+				duration = 3650 # 10 years
 			}
 		}
 	}
-	sca_build_markets = {
+	sca_establish_trade_network	= {
 		icon = mission_early_game_buildings
 		required_missions = {
 			sca_build_workshops
@@ -548,24 +618,57 @@ developing_scandinavia = {
 		}
 		position = 7
 		trigger = {
+			1 = { #Stockholm
+				has_building = trade_depot
+			}
+			12 = { #Själland
+				has_building = trade_depot
+			}
+			44 = { #Hamburg
+				has_building = trade_depot
+			}
+			43 = { #Danzig
+				has_building = trade_depot
+			}
+			45 = { # Lubeck
+				has_building = trade_depot
+			}
+			1852 = { #Stettin
+				has_building = trade_depot
+			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "efficienct_merchants"
+				duration = 3650 # 10 years
 			}
 		}
 	}
 	sca_build_manufactories = {
 		icon = mission_have_manufactories
-		required_missions = { sca_build_markets }
+		required_missions = { sca_building_up_the_trade_network }
 		position = 8
 		trigger = {
+			8 = { #Dalaskogen
+				has_building = weapons
+			}
+			4 = { #Bergslagen
+				has_building = weapons
+			}
+			2993 = { #Uckermark
+				has_building = textile
+			}
+			2996 = { #Wismark
+				has_building = textile
+			}
+			55 = { #Oldenburg
+				has_building = wharf
+			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "growing_economy"
+				duration = 9125 #25 years
 			}
 		}
 	}
@@ -574,11 +677,29 @@ developing_scandinavia = {
 		required_missions = { sca_build_manufactories }
 		position = 9
 		trigger = {
+			1 = { #Stockholm
+				has_building = university
+			}
+			12 = { #Själland
+				has_building = university
+			}
+			17 = { #Akershus
+				has_building = university
+			}
+			27 = { #Åbo
+				has_building = university
+			}
+			38 = { #Riga
+				has_building = university
+			}
+			45 = { #Lubeck
+				has_building = university
+			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "western_reforms"
+				duration = 3650 # 10 years
 			}
 		}
 	}
@@ -587,11 +708,29 @@ developing_scandinavia = {
 		required_missions = { sca_build_universities }
 		position = 10
 		trigger = {
+			1 = { #Stockholm
+				development = 50
+			}
+			12 = { #Själland
+				development = 40
+			}
+			17 = { #Akershus
+				development = 30
+			}
+			27 = { #Åbo
+				development = 30
+			}
+			38 = { #Riga
+				development = 30
+			}
+			45 = { #Lubeck
+				development = 30
+			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "urbanization_middle_road"
+				duration = -1
 			}
 		}
 	}
@@ -623,8 +762,8 @@ sca_in_the_new_world = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "navigator_boost"
+				duration = 9125 #25 years
 			}
 		}
 	}
@@ -645,8 +784,8 @@ sca_in_the_new_world = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "navigator_boost"
+				duration = 9125 #25 years
 			}
 		}
 	}
@@ -669,8 +808,8 @@ sca_in_the_new_world = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "colonial_enthusiasm"
+				duration = 9125 #25 years
 			}
 		}
 	}
@@ -683,7 +822,7 @@ sca_in_the_new_world = {
 		}
 		trigger = {
 			custom_trigger_tooltip = {
-				tooltip = sca_create_vinland
+				tooltip = sca_create_new_sweden
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 5
 					colonial_region = colonial_canada
@@ -693,100 +832,50 @@ sca_in_the_new_world = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "colonial_enthusiasm"
+				duration = 9125 #25 years
 			}
 		}
 	}
-	luxuries_for_the_elite = {
-		icon = mission_trade_company_region_abroad
-		required_missions = { }
+	establish_new_sweden = {
+		icon = mission_colonial
+		required_missions = { establish_vinland }
 		position = 5
 		provinces_to_highlight = {
-			OR = {
-				province_id = 493
-				province_id = 494
-				province_id = 495
-				province_id = 496
-				province_id = 497
-				province_id = 498
-				province_id = 499
-				province_id = 500
-				province_id = 501
-				province_id = 1881
-			}
+			colonial_region = colonial_eastern_america
 		}
 		trigger = {
-			OR = {
-				sugar = 1
-				coffee = 1
-				tobacco = 1
+			custom_trigger_tooltip = {
+				tooltip = sca_create_vinland
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					colonial_region = colonial_eastern_america
+					is_city = yes
+				}
 			}
+			owns = 968 #Massachusets
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "colonial_enthusiasm"
+				duration = 9125 #25 years
 			}
 		}
 	}
-	increased_demand_for_luxuries = {
+	new_luxuries = {
 		icon = mission_trade_company_region_abroad
-		required_missions = { luxuries_for_the_elite }
+		required_missions = { }
 		position = 6
 		provinces_to_highlight = {
 			OR = {
-				province_id = 493
-				province_id = 494
-				province_id = 495
-				province_id = 496
-				province_id = 497
-				province_id = 498
-				province_id = 499
-				province_id = 500
-				province_id = 501
-				province_id = 1881
-			}
-		}
-		trigger = {
-			OR = {
-				AND = {
-					sugar = 1
-					coffee = 1
-				}
-				AND = {
-					sugar = 1
-					tobacco = 1
-				}
-				AND = {
-					tobacco = 1
-					coffee = 1
-				}
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
-			}
-		}
-	}
-	only_the_best = {
-		icon = mission_trade_company_region_abroad
-		required_missions = { increased_demand_for_luxuries }
-		position = 7
-		provinces_to_highlight = {
-			OR = {
-				province_id = 493
-				province_id = 494
-				province_id = 495
-				province_id = 496
-				province_id = 497
-				province_id = 498
-				province_id = 499
-				province_id = 500
-				province_id = 501
-				province_id = 1881
+				area = windward_islands_area
+				area = leeward_islands_area
+				area = cumana_area
+				province_id = 2013
+				province_id = 970
+				province_id = 968
+				province_id = 2561
+				province_id = 967
 			}
 		}
 		trigger = {
@@ -796,8 +885,51 @@ sca_in_the_new_world = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = "baltic_ambition_new"
-				duration = 10
+				name = "more_merchants"
+				duration = -1
+			}
+		}
+	}
+	exotic_tastes = {
+		icon = mission_trade_company_region_abroad
+		required_missions = { }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				region = central_america_region 
+			}
+		}
+		trigger = {
+			spices = 1
+			cocoa = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "more_merchants"
+				duration = -1
+			}
+		}
+	}
+	exclusive_desires = {
+		icon = mission_trade_company_region_abroad
+		required_missions = { }
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				area = guinea_coast_area
+				area = west_africa_coast_area
+				province_id = 1166
+			}
+		}
+		trigger = {
+			ivory = 1
+			dyes = 1
+			gems = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "more_merchants"
+				duration = 1
 			}
 		}
 	}
