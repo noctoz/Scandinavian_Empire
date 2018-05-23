@@ -75,3 +75,8 @@ wood_industry_hub_modifier = {
 	local_development_cost = -0.10
 	local_build_cost = -0.25
 }
+
+well_drilled_armies_modifier = {
+	drill_gain_modifier = 0.2
+	drill_decay_modifier = -0.1
+}

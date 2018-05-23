@@ -181,7 +181,7 @@ fortifying_scandinavia = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = "standardized_uniforms_modifier"
+				name = "well_drilled_armies_modifier"
 				duration = 9125 #25 years
 			}
 		}
@@ -507,20 +507,29 @@ developing_scandinavia = {
 		icon = mission_high_income
 		required_missions = { }
 		position = 1
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4
+				province_id = 5
+				province_id = 8
+				province_id = 1985
+				province_id = 4114
+			}
+		}
 		trigger = {
 			4 = { #Bergslagen
-				base_production = 6
-			}
-			1985 = { #Närke
 				base_production = 6
 			}
 			5 = { #Värmland
 				base_production = 6
 			}
-			4114 = { #Jokkmokk
+			8 = { #Dalaskogen
 				base_production = 6
 			}
-			8 = { #Dalaskogen
+			1985 = { #Närke
+				base_production = 6
+			}
+			4114 = { #Jokkmokk
 				base_production = 6
 			}
 		}
@@ -531,25 +540,25 @@ developing_scandinavia = {
 					duration = -1
 				}
 			}
-			1985 = { #Närke
-				add_province_modifier = {
-					name = "industrious_boost"
-					duration = -1
-				}
-			}
 			5 = { #Värmland
 				add_province_modifier = {
 					name = "industrious_boost"
 					duration = -1
 				}
 			}
-			4114 = { #Jokkmokk
+			8 = { #Dalaskogen
 				add_province_modifier = {
 					name = "industrious_boost"
 					duration = -1
 				}
 			}
-			8 = { #Dalaskogen
+			1985 = { #Närke
+				add_province_modifier = {
+					name = "industrious_boost"
+					duration = -1
+				}
+			}
+			4114 = { #Jokkmokk
 				add_province_modifier = {
 					name = "industrious_boost"
 					duration = -1
@@ -561,6 +570,15 @@ developing_scandinavia = {
 		icon = mission_early_game_buildings
 		required_missions = { ore_is_our_core }
 		position = 2
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1
+				province_id = 2
+				province_id = 7
+				province_id = 12
+				province_id = 44
+			}
+		}
 		trigger = {
 			1 = { #Stockholm
 				has_building = temple
@@ -589,14 +607,22 @@ developing_scandinavia = {
 		icon = mission_early_game_buildings
 		required_missions = { sca_build_for_the_future }
 		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1
+				province_id = 6
+				province_id = 8
+				province_id = 4114
+			}
+		}
 		trigger = {
 			1 = { #Stockholm
 				has_building = workshop
 			}
-			8 = { #Dalaskogen
+			6 = { #Skåne
 				has_building = workshop
 			}
-			6 = { #Skåne
+			8 = { #Dalaskogen
 				has_building = workshop
 			}
 			4114 = { #Jokkmokk
@@ -617,6 +643,16 @@ developing_scandinavia = {
 			integrate_pommerania
 		}
 		position = 7
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1
+				province_id = 12
+				province_id = 43
+				province_id = 44
+				province_id = 45
+				province_id = 1852
+			}
+		}
 		trigger = {
 			1 = { #Stockholm
 				has_building = trade_depot
@@ -624,10 +660,10 @@ developing_scandinavia = {
 			12 = { #Själland
 				has_building = trade_depot
 			}
-			44 = { #Hamburg
+			43 = { #Danzig
 				has_building = trade_depot
 			}
-			43 = { #Danzig
+			44 = { #Hamburg
 				has_building = trade_depot
 			}
 			45 = { # Lubeck
@@ -646,23 +682,32 @@ developing_scandinavia = {
 	}
 	sca_build_manufactories = {
 		icon = mission_have_manufactories
-		required_missions = { sca_building_up_the_trade_network }
+		required_missions = { sca_establish_trade_network }
 		position = 8
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4
+				province_id = 8
+				province_id = 55
+				province_id = 2993
+				province_id = 2996
+			}
+		}
 		trigger = {
+			4 = { #Bergslagen
+					has_building = weapons
+			}
 			8 = { #Dalaskogen
 				has_building = weapons
 			}
-			4 = { #Bergslagen
-				has_building = weapons
+			55 = { #Oldenburg
+				has_building = wharf
 			}
 			2993 = { #Uckermark
 				has_building = textile
 			}
 			2996 = { #Wismark
 				has_building = textile
-			}
-			55 = { #Oldenburg
-				has_building = wharf
 			}
 		}
 		effect = {
@@ -676,6 +721,16 @@ developing_scandinavia = {
 		icon = mission_unite_home_region
 		required_missions = { sca_build_manufactories }
 		position = 9
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1
+				province_id = 12
+				province_id = 17
+				province_id = 27
+				province_id = 38
+				province_id = 45
+			}
+		}
 		trigger = {
 			1 = { #Stockholm
 				has_building = university
@@ -707,6 +762,16 @@ developing_scandinavia = {
 		icon = mission_empire
 		required_missions = { sca_build_universities }
 		position = 10
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1
+				province_id = 12
+				province_id = 17
+				province_id = 27
+				province_id = 38
+				province_id = 45
+			}
+		}
 		trigger = {
 			1 = { #Stockholm
 				development = 50

@@ -26,6 +26,8 @@
  desc_blessed_by_freya_modifier:0 "Freya has blessed us, granting as powerful boons for a short time."
  wood_industry_hub_modifier:0 "Wood Industry Hub"
  desc_wood_industry_hub_modifier:0 "This is the hub of Finlands important wood industry."
+ well_drilled_armies_modifier:0 "Well Drilled Armies"
+ desc_well_drilled_armies_modifier:0 "Our new generals are pushing hard for having well drilled armies."
  # Missions
  integrate_finland_title:0 "Integrate Finland"
  integrate_finland_desc:0 "We need to bring the empire together before we face the rest of the world and this starts by integrating Finland."
