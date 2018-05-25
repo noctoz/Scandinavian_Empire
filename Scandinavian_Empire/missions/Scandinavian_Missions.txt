@@ -366,10 +366,28 @@ sca_diplomacy_and_trade = {
 			}
 		}
 	}
-	sca_and_lit = {
+	sca_and_fri = {
 		icon = mission_alliances
 		required_missions = { sca_vassal_opinion }
 		position = 3
+		trigger = {
+			alliance_with = FRI
+		}
+		effect = {
+			add_country_modifier = {
+				name = "diplomatic_moves"
+				duration = 18250 #50 years
+			}
+			add_dip_power = 50
+		}
+	}
+	sca_and_lit = {
+		icon = mission_alliances
+		required_missions = {
+			sca_and_fri 
+			integrate_norway
+		}
+		position = 4
 		trigger = {
 			alliance_with = LIT
 		}
@@ -383,7 +401,7 @@ sca_diplomacy_and_trade = {
 	sca_powerful_allies = {
 		icon = mission_alliances
 		required_missions = { sca_and_lit }
-		position = 4
+		position = 5
 		trigger = {
 			OR = {
 				alliance_with = FRA
@@ -417,7 +435,7 @@ sca_diplomacy_and_trade = {
 		icon = mission_dominate_home_trade_node
 		required_missions = {
 			create_sca_trade_fleet
-			sca_build_markets
+			sca_establish_trade_network
 		}
 		position = 8
 		trigger = {
@@ -445,50 +463,74 @@ sca_diplomacy_and_trade = {
 		icon = mission_dominate_home_trade_node
 		required_missions = {
 			sca_dominating_trade
-			sca_build_manufactories
 		}
 		position = 9
 		trigger = {
-			OR = {
-				45 = { #Lubeck
-					highest_value_trade_node = yes
-					is_strongest_trade_power = ROOT
-				}
-				1926 = { #Baltic Sea
-					highest_value_trade_node = yes
-					is_strongest_trade_power = ROOT
-				}
+			home_trade_node = {
+				highest_value_trade_node = yes
+				is_strongest_trade_power = ROOT
 			}
 		}
 		effect = {
-			add_prestige = 30
-			if = {
-				limit = {
-					45 = { #Lubeck
-						highest_value_trade_node = yes
-						is_strongest_trade_power = ROOT
+			hidden_effect = {
+				random_active_trade_node = {
+					limit = {
+						any_trade_node_member_province = {
+							is_capital = yes
+							owned_by = ROOT
+						}
+					}
+					capital_scope = {
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 20
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 25
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 30
+						}
+						save_event_target_as = reward_province
 					}
 				}
-				45 = {
+			}
+			if = {
+				limit = { has_saved_event_target = reward_province }
+				event_target:reward_province = {
 					add_province_modifier = {
 						name = "dominant_trade_hub"
 						duration = -1
 					}
 				}
 			}
-			if = {
-				limit = {
-					1926 = { #Lubeck
-						highest_value_trade_node = yes
-						is_strongest_trade_power = ROOT
-					}
-				}
-				1 = { # Stockholm
-					add_province_modifier = {
-						name = "dominant_trade_hub"
-						duration = -1
-					}
-				}
+			else = {
+				custom_tooltip = dominant_home_node_reward_tooltip
 			}
 		}
 	}
@@ -636,10 +678,47 @@ developing_scandinavia = {
 			}
 		}
 	}
+	sca_build_manufactories = {
+		icon = mission_have_manufactories
+		required_missions = { sca_build_workshops }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4
+				province_id = 8
+				province_id = 55
+				province_id = 2993
+				province_id = 2996
+			}
+		}
+		trigger = {
+			4 = { #Bergslagen
+					has_building = weapons
+			}
+			8 = { #Dalaskogen
+				has_building = weapons
+			}
+			55 = { #Oldenburg
+				has_building = wharf
+			}
+			2993 = { #Uckermark
+				has_building = textile
+			}
+			2996 = { #Wismark
+				has_building = textile
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "growing_economy"
+				duration = 9125 #25 years
+			}
+		}
+	}
 	sca_establish_trade_network	= {
 		icon = mission_early_game_buildings
 		required_missions = {
-			sca_build_workshops
+			sca_build_manufactories
 			integrate_pommerania
 		}
 		position = 7
@@ -680,46 +759,9 @@ developing_scandinavia = {
 			}
 		}
 	}
-	sca_build_manufactories = {
-		icon = mission_have_manufactories
-		required_missions = { sca_establish_trade_network }
-		position = 8
-		provinces_to_highlight = {
-			OR = {
-				province_id = 4
-				province_id = 8
-				province_id = 55
-				province_id = 2993
-				province_id = 2996
-			}
-		}
-		trigger = {
-			4 = { #Bergslagen
-					has_building = weapons
-			}
-			8 = { #Dalaskogen
-				has_building = weapons
-			}
-			55 = { #Oldenburg
-				has_building = wharf
-			}
-			2993 = { #Uckermark
-				has_building = textile
-			}
-			2996 = { #Wismark
-				has_building = textile
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = "growing_economy"
-				duration = 9125 #25 years
-			}
-		}
-	}
 	sca_build_universities = {
 		icon = mission_unite_home_region
-		required_missions = { sca_build_manufactories }
+		required_missions = { sca_establish_trade_network }
 		position = 9
 		provinces_to_highlight = {
 			OR = {
