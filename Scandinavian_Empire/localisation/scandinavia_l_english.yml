@@ -105,3 +105,8 @@
  sca_colony_in_canada:0 "Establish at least 1 colony in Canada"
  sca_create_vinland:0 "Have Vinland as Colonial Nation"
  sca_create_new_sweden:0 "Have New Sweden as Colonial Nation"
+ # Ideas
+ SCA_ideas:0 "Scandinavian Ideas"
+ SCA_ideas_start:0 "Scandinavian Traditions"
+ SCA_ideas_bonus:0 "Scandinavian Ambition"
+ 
