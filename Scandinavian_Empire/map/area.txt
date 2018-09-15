@@ -79,8 +79,8 @@ south_china_sea_area = {
 	1361 1362 1363 1364 1365 1366 1367 1368 1369 1370 1371 1393 1394 1395
 }
 
-celebes_sea_area = { #5
-	1359 1398 1399 1400 4358
+celebes_sea_area = { #4
+	1359 1398 1399 1400
 }
 
 java_sea_area = { #3
@@ -113,7 +113,7 @@ coral_sea_area = {
 
 philipine_sea_area = {
 	1396 1397 1439 1402 1403 1435 1436 1437 1438 1390 1391 1404 1440 4224
-	4357
+	4357 4358
 }
 
 banda_arafura_seas_area = {
@@ -1583,8 +1583,8 @@ mascarenes_area = { #3
 	1100 1102 1103
 }
 
-indian_ocean_islands_area = { #4
-	574 1101 1998 1999
+indian_ocean_islands_area = { #5
+	574 1101 1248 1998 1999
 }
 
 papua_area = { #5 (Papuan Peninsula)
@@ -1915,202 +1915,291 @@ tabarestan_area = { #5
 # India  		                       #
 ########################################
 
-upper_doab_area = { #3 (Delhi+Agra Subahs)
+sirhind_area = {	#4
+	510 2065 4411 4463
+}
+
+sind_sagar_area = { #3
+	2077 2078 4511
+}
+
+oudh_area = { #5
+	523 2094 4494 4495 4497
+}
+
+katehar_area = { #3
+	2061 4498 4499
+}
+
+purvanchal_area = { #4
+	555 2055 2095 4490
+}
+
+upper_doab_area = { #3
 	522 2060 2062
 }
 
-sirhind_area = {	#3
-	510 2065 2075
-}
-
-central_doab_area = {	#3 Approximate Agra Subah
-	524 525 2063
-}
-
-oudh_area = { #3
-	523 2061 2094
-}
-
-purvanchal_area = { #3
-	555 2055 2095
-}
-
-lower_doab_area = { #4 (lower doab and Bundelkhand)
+lower_doab_area = { #4
 	color = { 212 199 59 }
-	556 559 2059 2097
+	524 556 2063 4496
 }
 
-lahore_area = { #3 (approximate Lahore Subah)
-	507 2076 2077
+lahore_area = { #5 (approximate Lahore Subah)
+	507 2075 2076 4510 4513
 }
 
-multan_area = { #4 (approximate Multan Subah)
-	506 2078 2079 2086
-}
-
-west_bengal_area = { #4
-	561 563 2039 2081
+multan_area = { #5 (approximate Multan Subah)
+	506 2079 2086 4508 4509
 }
 
 naga_hills_area = { #3
 	570 573 2041
 }
 
-east_bengal_area = { #3
-	564 567 2091
+east_bengal_area = { #5
+	564 2039 4474 4475 4478
 }
 
-north_bengal_area = { #3
-	562 2045 2046
+north_bengal_area = { #4
+	562 2045 2046 4486
 }
 
-bihar_area = { #3
-	558 2044 2047
+tripura_area { #3
+	567 2091 4473
 }
 
-jharkhand_area = { #3
-	560 2096 2098
+bihar_area = { #4
+	558 4469 4472 4489
 }
 
-gondwana_area = { #4
-	550 551 2082 2092
+mithila_area = { #4
+	2047 4484 4487 4488
 }
 
-orissa_area = { #3
-	552 2038 2043 
+jharkhand_area = { #4
+	560 2096 4450 4470 4471
 }
 
-garjat_area = { #4
-	547 553 2048 2049
+upper_mahanadi_area = { #5
+	553 2082 4447 4451 4452
+}
+
+gaur_area = { #3
+	563 2044 4479 
+}
+
+west_bengal_area = { #4
+	561 2081 4476 4477
+}
+
+gird_area = { #5 #Gird and Hadoti
+	525 528 740 4464 4465
+}
+
+baghelkhand_area = { #3
+	2097 2098 4468
+}
+
+bundelkhand_area = { #5
+	559 2059 4459 4466 4467
+}
+
+gondwana_area = { #5
+	550 551 2092 4458 4460
+}
+
+orissa_area = { #5
+	552 2038 2043 2049 4441
+}
+
+garjat_area = { #5
+	547 2048 4445 4446 4448
 }
 
 telingana_area = { #3
-	542 2028 2037
+	2028 4438 4444
 }
 
-andhra_area = { #4
-	543 549 2080 2084
+golconda_area = { #4
+	542 2037 4436 4439
 }
 
-rayalaseema_area = {
-	541 1949 2090
+andhra_area = { #5
+	543 549 2084 2080 4425
 }
 
-kerala_area = { #4
-	534 535 537 1248
+raichur_doab_area = { #3
+	532 2033 4428 
+}
+
+khandesh_area = {
+	527 4434 4453
+}
+
+rayalaseema_area = { #5
+	541 1949 2090 4423 4424
+}
+
+malabar_area = { #5
+	534 535 537 4410 4413
 }
 
 malwa_area = { #5
 	color = { 232 18 18 }
-	526 527 740 2057 2093
+	526 2056 2057 2093 4461
 }
 
-mewar_area = { #4
+mewar_area = { #5
 	color = { 126 17 17 }
-	518 528 2058 2087 
+	518 2058 2087 4501 4462
 }
 
-marwar_area = { #5
-	512 513 514 2066 2067
+jangladesh_area = { #4
+	512 4502 4507 2066
 }
 
-jaipur_area = { #3
-	519 520 2064
+marwar_area = { #4
+	513 514 2067 4506
 }
 
-sindh_area = { #5
-	504 505 2072 2088
+jaipur_area = { #4
+	519 520 2064 4500
 }
 
-carnatic_area = { #4 (Only the Golcondan Karnatak)
-	color = { 17 126 25 }
-	538 1947 2027 2085
+sindh_area = { #4
+	504 2088 4503 4504
 }
 
-coromandel_area = { #3
+northern_sindh_area = { #3
+	505 2072 4505
+}
+
+north_carnatic_area = { #4 (Only the Golcondan Karnatak)
+	2083 4418 4419 4420
+}
+
+south_carnatic_area = { #5 (Only the Golcondan Karnatak)
 	color = { 77 149 195 }
-	539 540 2083
+	539 540 1947 2027 4417 
 }
 
 madura_area = { #3
-	536 2026 2101
+	536 2101 4412
 }
 
-konkan_area = { #3
-	529 530 2089 
+tanjore_area = { #3
+	2026 4415 4416
 }
 
-kanara_area = { #3
-	531 2029 2030
+kongu_area = {
+	538 2085 4414
 }
 
-maidan_area = { #5 (northern Bayuluseeme)
-	532 569 1948 2033 2035 
-}
-
-mysore_area = { #3
-	533 2031 2032
-}
-
-maharashtra_area = { #4
-	545 546 548 2050
+konkan_area = { #4
+	529 530 2089 4429
 }
 
 desh_area = { #3
-	544 1946 2034
+	1946 2034 4431
 }
 
-assam_area = { #4
-	566 571 2040 2042
+ahmednagar_area = { #5
+	544 545 4432 4433 4437
 }
 
-himalayan_hills_area = { #3
-	509 511 2069  
+kanara_area = { #5
+	531 2029 2030 2032 4427
 }
 
-nepalese_area = { #5
-	554 557 2070 2071
+maidan_area = { #4 (northern Bayuluseeme)
+	569 1948 2035 4435
 }
 
-kashmir_area = { #3
-	508 2073 2074
+mysore_area = { #5
+	533 2031 4421 4422 4426
 }
 
-lanka_area = { #3
-	572 2099 2100
+berar_area = { #5
+	546 548 2050 4442 4443
 }
 
-gujarat_area = { #3
-	2053 2054 2056
+assam_area = { #5
+	566 571 2040 2042 4440
+}
+
+himalayan_hills_area = { #4
+	509 511 2069 4493
+}
+
+nepal_area = { #5
+	557 2070 2071 4483 4485
+}
+
+baisi_rajya_area = { #3
+	4491 4492 554
+}
+
+bhutan_area = {
+	565 4481 4482
+}
+
+kashmir_area = { #5
+	508 2073 2074 4449 4521
+}
+
+lanka_area = { #North Lanka #3
+	2100 4408 4409
+}
+
+south_lanka_area = { #3
+	572 2099 4407
+}
+
+ahmedabad_area = { #5
+	516 2051 2054 4512 4457
+}
+
+patan_area = { #4
+	503 2053 4456 4480
 }
 
 tapti_area = { #3
 	color = { 18 107 18 }
-	516 517 2036
+	517 2036 4430
 }
 
 saurashtra_area = { #5
-	503 515 521 2051 2052
+	515 521 2052 4454 4455
 }
+
+
 
 ########################################
 # Indo-China  	                       #
 ########################################
 
-upper_burma_area = { #5
-	580 581 584 2398 2399
+upper_burma_area = { #3
+	584 2399 581
+}
+
+central_burma_area = {
+	4394 4396 585 4395 
+}
+
+chindwin_area = {
+	2398 580 4393 2397
 }
 
 kachin_area = { #4
-	582 2395 2396 2397
+	582 2395 2396 4404 4405
 }
 
-shan_hill_area = { #3
-	583 588 2400
+shan_hill_area = { #4
+	583 588 2400 4397 4406
 }
 
 karenni_area = { #3 #Southern Shan States
-	587 589 2401
+	587 2401 4398
 }
 
 
@@ -2135,7 +2224,7 @@ cambodia_area = { #5
 }
 
 lower_burma_area = { #5
-	585 586 590 1815 2403
+	586 590 1815 2403 4399
 }
 
 arakan_area = { #3
@@ -2175,8 +2264,8 @@ central_thai_area = { #4
 	600 603 2388 2389
 }
 
-northern_thai_area = { #3
-	601 602 1817
+northern_thai_area = { #4
+	601 602 1817 589
 }
 
 ########################################
@@ -2536,8 +2625,8 @@ amdo_area = { #4
 	705 706 2134 4204 
 }
 
-tsang_area = { #4
-	565 677 2130 4205
+tsang_area = { #5
+	677 2130 4205 4517 4519
 }
 
 north_zungaria = { #3
@@ -2548,9 +2637,13 @@ kham_area = { #5
 	678 2131 2132 2133 2135 
 }
 
-utsang_area = { #3
-	676 2128 2129 
+utsang_area = { #4
+	676 4514 4515 4518
 }
+
+ngari_area = { #3
+	2128 4516 4520
+} #new!!
 
 hebei_area = { #4 (North Hebei)
 	703 1816 2136 4194
@@ -3432,3 +3525,23 @@ brabant_area = {
 
 luxemburg_liege_area = {
 }
+
+coromandel_area = 
+}
+
+carnatic_area = {
+
+}
+
+kerala_area = {
+
+}
+maharashtra_area = {
+
+}
+gujarat_area = { }
+
+central_doab_area = {
+}
+
+nepalese_area = { }
