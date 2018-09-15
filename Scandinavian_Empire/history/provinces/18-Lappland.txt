@@ -16,3 +16,4 @@ discovered_by = eastern
 discovered_by = western
 
 1580.1.1 = { trade_goods = paper }
+1607.1.1 = { capital = "Lycksele" }

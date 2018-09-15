@@ -1,6 +1,9 @@
 # Visby
-government = oligarchic_republic
+government = republic
+
+add_government_reform = noble_elite_reform
 government_rank = 1
+mercantilism = 25
 technology_group = western
 primary_culture = swedish
 religion = norse_pagan_reformed
