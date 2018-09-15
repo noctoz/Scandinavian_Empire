@@ -93,15 +93,13 @@ north_german_region = {
 		thuringia_area
 		neumark_area
 		mittelmark_area
-		vorpommern_area
 		bohemia_area
-		hinter_pommern_area
 		north_rhine_area
 		lower_rhineland_area
 		westphalia_area
 		hesse_area
-		mecklenburg_area
 		braunschweig_area
+		west_prussia_area
 	}
 }
 
@@ -206,10 +204,12 @@ baltic_region = {
 		livonia_area
 		estonia_ingria_area
 		curonia_area
-		west_prussia_area
 		east_prussia_area
 		pomerelia_area
 		samogitia_area
+		mecklenburg_area
+		vorpommern_area
+		hinter_pommern_area
 	}
 }
 
