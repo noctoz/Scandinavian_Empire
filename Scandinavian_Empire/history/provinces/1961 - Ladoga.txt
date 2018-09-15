@@ -12,8 +12,8 @@ base_manpower = 2
 capital = "Ladoga"
 is_city = yes
 add_core = EST
-
-
+estate = estate_nobles
+fort_15th = yes
 
 discovered_by = eastern
 discovered_by = western

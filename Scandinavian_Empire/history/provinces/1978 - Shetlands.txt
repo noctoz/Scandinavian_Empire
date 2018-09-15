@@ -13,6 +13,7 @@ capital = "Lerwick"
 is_city = yes # Estimated
 add_core = SCA
 fort_15th = yes
+estate = estate_nobles
 add_permanent_province_modifier = {
 	name = seat_of_jomsvikings_modifier
 	duration = -1

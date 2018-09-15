@@ -12,6 +12,7 @@ trade_goods = livestock
 base_manpower = 5
 capital = "Gladsax"
 is_city = yes
+estate = estate_church
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim

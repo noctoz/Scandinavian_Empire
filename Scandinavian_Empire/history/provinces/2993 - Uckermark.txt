@@ -13,7 +13,7 @@ base_manpower = 3
 capital = "Prenzlau"
 is_city = yes
 fort_15th = yes
-
+estate = estate_nobles
 
 discovered_by = eastern
 discovered_by = western
