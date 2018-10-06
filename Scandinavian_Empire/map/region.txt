@@ -51,6 +51,16 @@ scandinavia_region = {
 		lower_saxony_area
 		weser_area
 		holstein_area
+		mecklenburg_area
+		vorpommern_area
+		hinter_pommern_area
+		livonia_area
+		estonia_ingria_area
+		curonia_area
+		east_prussia_area
+		west_prussia_area
+		pomerelia_area
+		samogitia_area
 	}
 }
 
@@ -99,7 +109,6 @@ north_german_region = {
 		westphalia_area
 		hesse_area
 		braunschweig_area
-		west_prussia_area
 	}
 }
 
@@ -198,21 +207,6 @@ british_isles_region = {
 	}
 }
 
-baltic_region = {
-	areas = {
-		lithuania_area
-		livonia_area
-		estonia_ingria_area
-		curonia_area
-		east_prussia_area
-		pomerelia_area
-		samogitia_area
-		mecklenburg_area
-		vorpommern_area
-		hinter_pommern_area
-	}
-}
-
 poland_region = {
 	areas = {
 		wielkopolska_area
@@ -220,7 +214,9 @@ poland_region = {
 		red_ruthenia_area
 		mazovia_area
 		silesia_area
-		
+		central_poland_area
+		sandomierz_area
+		kuyavia_area
 	}
 }
 
@@ -234,6 +230,10 @@ ruthenia_region = {
 		pripyat_area
 		smolensk_area
 		minsk_area
+		podlasie_area
+		volhynia_area
+		chernigov_area
+		lithuania_area
 	}
 }
 

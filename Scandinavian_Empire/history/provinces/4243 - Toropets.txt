@@ -1,7 +1,7 @@
 #4243 - Toropets
 
-owner = LIT
-controller = LIT
+owner = NOV
+controller = NOV
 culture = byelorussian
 religion = norse_pagan_reformed
 hre = no

@@ -1,4 +1,4 @@
-#2407 - Pereyaslav
+#4542 - Lubnie
 
 owner = LIT
 controller = LIT
@@ -9,12 +9,13 @@ base_tax = 2
 base_production = 2
 trade_goods = grain
 base_manpower = 1
-capital = "Pereyaslav"
+capital = "Lubnie"
 is_city = yes
 #estate = estate_nobles
 add_local_autonomy = 10
 add_core = LIT
 add_core = CHR
+fort_15th = yes
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim

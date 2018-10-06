@@ -1,9 +1,9 @@
 #275 - Polotsk
 
-owner = LIT 
-controller = LIT 
+owner = PSK
+controller = PSK
 culture = byelorussian
-religion = norse_pagan_reformed 
+religion = norse_pagan_reformed
 hre = no
 base_tax = 4
 base_production = 4

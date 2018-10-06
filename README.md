@@ -20,8 +20,17 @@ Map changes:
 - Lower Saxony (lower_saxony_area) moved from North Germany to Scandinavia
 - Weser (weser_area) moved from North Germany to Scandinavia
 - Schleswig-Holstein (holstein_area) moved from North Germany to Scandinavia
-- Mecklenburg (mecklenburg_area) moved from North Germany to Baltic
-- Vorpommern (vorpommern_area) moved from North Germany to Baltic
-- Hinterpommern (hinter_pommern_area) moved from North Germany to Baltic
-- West Prussia (west_prussia_area) moved from Baltic to North Germany
+- Mecklenburg (mecklenburg_area) moved from North Germany to Scandinavia
+- Vorpommern (vorpommern_area) moved from North Germany to Scandinavia
+- Hinterpommern (hinter_pommern_area) moved from North Germany to Scandinavia
+- Lithiania (lithuania_area) moved from Baltic to Scandinavia
+- Livonia (livonia_area) moved from Baltic to Scandinavia
+- Estonia (estonia_ingria_area) moved from Baltic to Scandinavia
+- Curonia (curonia_area) moved from Baltic to Scandinavia
+- East Prussia (east_prussia_area) moved from Baltic to Scandinavia
+- West Prussia (west_prussia_area) moved from Baltic to Scandinavia
+- Pomeralia (pomerelia_area) moved from Baltic to Scandinavia
+- Samogitia (samogitia_area) moved from Baltic to Scandinavia
+- Aukstaitija (lithuania_area) moved from Baltic to Ruthenia
 - White Karelia (1776) moved from Pomorye (pomor_area) to Ostrobothnia (bothnia_area)
+- Tuchel (2997) moved from West Prussia (west_prussia_area) to Kuyavia (kuyavia_area)

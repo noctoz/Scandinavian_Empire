@@ -646,44 +646,60 @@ east_prussia_area = { #4
 	40 41 767 2958
 }
 
-pomerelia_area = { #3 (North West Prussia)
+west_prussia_area = { #4 (South West Prussia)
 	42 43 1841
 }
 
-west_prussia_area = { #3 (South West Prussia)
-	1859 2963 2997
-}
-
-wielkopolska_area = { #4
-   254 255 258 1939
+wielkopolska_area = { #5
+   254 4526 255 2963
 }
 
 malopolska_area = { #5
-	259 260 262 2959 2960
+	262 4527 2960
 }
 
-red_ruthenia_area = { #4
-	261 1940 2424 2961
+red_ruthenia_area = { #5 
+	261 1940 2424 2961 4541
 }
 
-podolia_volhynia_area = { #4
-	279 281 1943 2962
+podolia_volhynia_area = { #3
+	281 4540 1943 
 }
 
-pripyat_area = { #3
-	277 278 1941
+volhynia_area = { # 4
+	279 2962 4539 4538
+}
+
+pripyat_area = { #4
+	 278 1941 4537 4545
+}
+
+podlasie_area = {
+	269 277 1937
 }
 
 mazovia_area = { #4
-	256 257 269 1938
+	256 257  1938 4525
 }
 
-samogitia_area = { #3
-	270 271 1936
+central_poland_area = {
+	258 1939 4533 4533
 }
 
-lithuania_area = { #3
-	272 770 1937
+sandomierz_area = {
+	260 2959 259   
+}
+
+kuyavia_area = {
+	2997 4523 1859 4524 4528
+}
+
+samogitia_area = { #4
+	270 271 1936 4534 
+}
+
+lithuania_area = { #5
+	272 770 4535 4536
 }
 
 west_dniepr_area = { #4 Right Bank Ukraine
@@ -691,7 +707,11 @@ west_dniepr_area = { #4 Right Bank Ukraine
 }
 
 east_dniepr_area = { #4 Left bank Ukraine
-	289 290 1945 2407
+	290 2407 4542
+}
+
+chernigov_area = {
+	1945 289 4543
 }
 
 sloboda_ukraine_area = { #4
@@ -718,8 +738,8 @@ white_ruthenia_area = { #3
 	292 771 4246
 }
 
-minsk_area = { #3
-	276 4115 4242
+minsk_area = { #4
+	276 4115 4242 4544
 }
 
 #Opolye
@@ -992,12 +1012,12 @@ bulgaria_area = { #5
 	150 159 1765 2746 2750
 }
 
-wallachia_area = { #3
-	160 161 2998
+wallachia_area = { #5
+	160 161 2998 4531 4532
 }
 
-moldavia_area = { #3
-	268 1756 2405
+moldavia_area = { #5
+	268 1756 2405 4529 4530
 }
 
 transylvania_area = { #4 #Northern Transylvania
@@ -3526,7 +3546,7 @@ brabant_area = {
 luxemburg_liege_area = {
 }
 
-coromandel_area = 
+coromandel_area = {
 }
 
 carnatic_area = {
@@ -3545,3 +3565,5 @@ central_doab_area = {
 }
 
 nepalese_area = { }
+
+pomerelia_area = { }

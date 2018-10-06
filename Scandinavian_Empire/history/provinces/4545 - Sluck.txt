@@ -1,18 +1,20 @@
-#276 - Minsk
+#Sluck
 
 owner = LIT
-controller = LIT  
+controller = LIT 
 culture = byelorussian
 religion = norse_pagan_reformed
 hre = no
-base_tax = 3
+base_tax = 2
 base_production = 3
-trade_goods = naval_supplies 
+trade_goods = cloth 
 base_manpower = 1
-capital = "Minsk"
+capital = "Sluck"
 is_city = yes
 add_core = LIT
-#fort_15th = yes
+
+
+
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
@@ -22,17 +24,21 @@ discovered_by = nomad_group
 
 1569.7.1 = {
 	owner = PLC
-	controller = PLC
-	add_core = PLC
+ 	controller = PLC
+ 	add_core = PLC
 } # Union of Lublin
-1655.1.1 = { controller = RUS } # Conquered by Tsar Alexei
-1660.1.1 = { controller = PLC } # Regained by Jan Kasimir
+1648.1.1 = {
+	revolt = { type = nationalist_rebels size = 1 }
+	controller = REB
+	add_core = ZAZ
+} # Ukrainian Cossack
+1654.1.1 = { revolt = {} controller = PLC remove_core = ZAZ }
+1655.10.5 = { controller = RUS } # Occupied, Pinsk and castle completely destroyed 
+1656.1.1 = { controller = PLC } # Estimated
 1793.1.23 = {
 	owner = RUS
 	controller = RUS
 	add_core = RUS
-} # Second Partition of Poland
+}
 1794.3.24 = { unrest = 5 } # Kosciuszko uprising, minimize the Russian influence
 1794.11.16 = { unrest = 0 }
-1812.7.8 = { controller = FRA } # Occupied by French troops
-1812.11.18 = { controller = RUS }
