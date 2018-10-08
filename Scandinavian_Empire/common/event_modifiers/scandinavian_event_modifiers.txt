@@ -42,6 +42,10 @@ gateway_to_america_modifier = {
 	allowed_num_of_buildings = 1
 }
 
+danish_defeat_modifier = {
+	reduced_liberty_desire = 50
+}
+
 finland_reclaimed_modifier = {
 	reduced_liberty_desire = 5
 }
@@ -49,6 +53,10 @@ finland_reclaimed_modifier = {
 norway_reclaimed_modifier = {
 	global_ship_recruit_speed = -0.1
 	naval_attrition = -0.1
+}
+
+denmark_reclaimed_modifier = {
+	global_unrest  = -1
 }
 
 pommerania_reclaimed_modifier = {

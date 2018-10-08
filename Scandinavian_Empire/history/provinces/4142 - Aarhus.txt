@@ -1,8 +1,8 @@
 #Eastern Jutland, incl. Aarhus, Djursland and Randers.
 
-owner = SCA
-controller = SCA
-add_core = SCA
+owner = DAN
+controller = DAN
+add_core = DAN
 culture = danish
 religion = norse_pagan_reformed
 hre = no

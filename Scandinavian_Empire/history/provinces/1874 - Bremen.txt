@@ -1,7 +1,7 @@
 #1874 - Bremen
 
-owner = SCA
-controller = SCA
+owner = DAN
+controller = DAN
 culture = danish
 religion = norse_pagan_reformed
 capital = "Bremen"
@@ -11,7 +11,7 @@ base_tax = 3
 base_production = 6
 base_manpower = 9
 is_city = yes
-add_core = SCA
+add_core = DAN
 fort_15th = yes
 estate = estate_burghers
 discovered_by = eastern

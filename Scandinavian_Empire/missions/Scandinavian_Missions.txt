@@ -73,10 +73,44 @@ sca_empire = {
 			}
 		}
 	}
+	integrate_denmark = {
+		icon = mission_unite_home_region
+		required_missions = { 
+			integrate_norway
+		}
+		position = 4
+		provinces_to_highlight = {
+			owned_by = DEN
+		}
+		trigger = {
+			owns = 12
+			owns = 13
+			owns = 14
+			owns = 15
+			owns = 44
+			owns = 53
+			owns = 54
+			owns = 55
+			owns = 1775
+			owns = 1857
+			owns = 1874
+			owns = 1983
+			owns = 1984
+			owns = 4141
+			owns = 4142
+			owns = 4149
+		}
+		effect = {
+			add_country_modifier = {
+				name = "denmark_reclaimed_modifier"
+				duration = -1
+			}
+		}
+	}
 	integrate_pommerania = {
 		icon = mission_unite_home_region
 		required_missions = {
-			integrate_norway
+			integrate_denmark
 			great_scandinavian_fleet
 		}
 		position = 6

@@ -1,16 +1,17 @@
 government = monarchy
-add_government_reform = feudalism_reform
 government_rank = 2
-primary_culture = norwegian
+add_government_reform = feudalism_reform
+primary_culture = danish
 religion = norse_pagan_reformed
 technology_group = western
-capital = 17 #Akershus
+historical_friend = NOR
+capital = 12 #Sjaelland
 
-1439.8.12 = {
+1431.5.21 = {
 	monarch = {
-		name = "Eirik"
+		name = "Olaf"
 		birth_date = 1392.2.22
-		dynasty = "af MunsÃ¶"
+		dynasty = "af Munsö"
 		adm = 5
 		dip = 3
 		mil = 3
@@ -18,7 +19,6 @@ capital = 17 #Akershus
 	add_ruler_personality = industrious_personality
 }
 1444.11.11 = {
-	add_treasury = 42
-	add_prestige = 3606
-	add_truce_with = SCA
+	add_treasury = 511
+	add_prestige = 2931
 }

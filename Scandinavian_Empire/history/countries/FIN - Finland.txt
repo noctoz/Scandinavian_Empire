@@ -6,7 +6,7 @@ technology_group = western
 primary_culture = finnish
 religion = norse_pagan_reformed
 clear_scripted_personalities = yes
-capital = 33 # Neva
+capital = 27 # Finland, Åbo
 1440.2.17 = {
 	monarch = {
 		name = "Vigdis"
@@ -20,7 +20,7 @@ capital = 33 # Neva
 	add_ruler_personality = navigator_personality
 }
 1444.11.11 = {
-	capital = 27
 	add_treasury = 3
 	add_prestige = 3469
+	add_truce_with = SCA
 }

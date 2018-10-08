@@ -1,8 +1,8 @@
 #Sönderjylland-Slesvig, incl. Slesvig, Haderslev and Flensborg
 
-add_core = SCA
-owner = SCA
-controller = SCA
+add_core = DAN
+owner = DAN
+controller = DAN
 culture = danish
 religion = norse_pagan_reformed
 hre = no

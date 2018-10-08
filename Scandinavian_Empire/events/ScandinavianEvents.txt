@@ -1,0 +1,43 @@
+namespace = sca_events
+
+# Danish rebellion
+country_event = {
+	id = sca_events.1
+	title = "sca_event_1_title"
+	desc = "sca_event_1_desc"
+	picture = SIEGE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "sca_event_1_opt" #this is the pointer to the localisation
+		DAN = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_independence_war
+			}
+		}
+	}
+}
+
+# Danish peace
+country_event = {
+	id = sca_events.2
+	title = "sca_event_2_title"
+	desc = "sca_event_2_desc"
+	picture = SIEGE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "sca_event_2_opt" #this is the pointer to the localisation
+		SCA = {
+			add_country_modifier = { 
+				name = danish_defeat_modifier
+				duration = 9125 # 25 years
+			}
+		}
+	}
+}

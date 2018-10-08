@@ -1,7 +1,7 @@
 #55 - Oldenburg
 
-owner = SCA
-controller = SCA
+owner = DAN
+controller = DAN
 culture = danish
 religion = norse_pagan_reformed
 capital = "Oldenburg"
@@ -11,7 +11,7 @@ base_tax = 3
 base_production = 4
 base_manpower = 3
 is_city = yes
-add_core = SCA
+add_core = DAN
 
 
 

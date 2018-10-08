@@ -20,7 +20,7 @@ capital = 1858 # Stettin
 	add_ruler_personality = martial_educator_personality
 }
 1444.11.11 = {
-	capital = 1858
 	add_treasury = 65
 	add_prestige = 4269
+	add_truce_with = SCA
 }

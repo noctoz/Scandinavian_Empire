@@ -1,7 +1,7 @@
 #54 - Stade
 
-owner = SCA
-controller = SCA
+owner = DAN
+controller = DAN
 culture = danish
 religion = norse_pagan_reformed
 capital = "Bremervörde"
@@ -11,7 +11,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 4
 is_city = yes
-add_core = SCA
+add_core = DAN
 
 
 
