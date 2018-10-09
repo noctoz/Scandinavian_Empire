@@ -42,7 +42,7 @@ gateway_to_america_modifier = {
 	allowed_num_of_buildings = 1
 }
 
-danish_defeat_modifier = {
+crushed_danish_rebellion_modifier = {
 	reduced_liberty_desire = 50
 }
 

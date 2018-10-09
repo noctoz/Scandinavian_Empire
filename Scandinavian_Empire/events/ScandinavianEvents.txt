@@ -21,23 +21,30 @@ country_event = {
 	}
 }
 
-# Danish peace
+# End of Danish rebellion
 country_event = {
 	id = sca_events.2
 	title = "sca_event_2_title"
 	desc = "sca_event_2_desc"
-	picture = SIEGE_eventPicture
+	picture = WOUNDED_SOLDIERS_eventPicture
 
 	fire_only_once = yes
 	is_triggered_only = yes
+	
+	trigger = {
+		tag = SCA
+	}
 
 	option = {
 		name = "sca_event_2_opt" #this is the pointer to the localisation
 		SCA = {
 			add_country_modifier = { 
-				name = danish_defeat_modifier
+				name = crushed_danish_rebellion_modifier
 				duration = 9125 # 25 years
 			}
+		}
+		DAN = {
+			kill_ruler = yes
 		}
 	}
 }
