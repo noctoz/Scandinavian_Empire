@@ -19,7 +19,7 @@ add_country_modifier = {
 		birth_date = 1406.1.23
 		dynasty = "af Munsö"
 		adm = 4
-		dip = 2
+		dip = 4
 		mil = 4
 	}
 	add_ruler_personality = martial_educator_personality
@@ -28,10 +28,9 @@ add_country_modifier = {
 		monarch_name = "Alfhildr"
 		dynasty = "af Munsö"
 		birth_date = 1424.10.11
-		death_date = 1504.10.11
 		female = yes
 		adm = 3
-		dip = 2
+		dip = 4
 		mil = 3
 	}
 	add_heir_personality = intricate_web_weaver_personality
