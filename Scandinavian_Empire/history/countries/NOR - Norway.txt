@@ -1,9 +1,11 @@
+# Norway
 government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 2
 primary_culture = norwegian
 religion = norse_pagan_reformed
 technology_group = western
+clear_scripted_personalities = yes
 capital = 17 #Akershus
 
 1439.8.12 = {

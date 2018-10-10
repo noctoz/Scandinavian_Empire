@@ -39,6 +39,7 @@ sca_empire = {
 				name = "finland_reclaimed_modifier"
 				duration = -1
 			}
+			add_dip_power = 100
 		}
 	}
 	integrate_norway = {
@@ -71,6 +72,7 @@ sca_empire = {
 				name = "norway_reclaimed_modifier"
 				duration = -1
 			}
+			add_dip_power = 100
 		}
 	}
 	integrate_denmark = {
@@ -105,6 +107,7 @@ sca_empire = {
 				name = "denmark_reclaimed_modifier"
 				duration = -1
 			}
+			add_dip_power = 100
 		}
 	}
 	integrate_pommerania = {
@@ -140,6 +143,7 @@ sca_empire = {
 				name = "pommerania_reclaimed_modifier"
 				duration = -1
 			}
+			add_dip_power = 100
 		}
 	}
 	integrate_estonia = {

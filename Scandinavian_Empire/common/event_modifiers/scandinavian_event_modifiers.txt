@@ -56,7 +56,8 @@ norway_reclaimed_modifier = {
 }
 
 denmark_reclaimed_modifier = {
-	global_unrest  = -1
+	diplomatic_annexation_cost = -0.2
+	trade_efficiency = 0.05
 }
 
 pommerania_reclaimed_modifier = {
