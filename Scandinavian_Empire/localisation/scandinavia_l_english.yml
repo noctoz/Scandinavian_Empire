@@ -122,3 +122,6 @@
  sca_event_2_title:0 "End of Danish Rebellion"
  sca_event_2_desc:0 "The vikings were not known for their mild treatment of traitors. All the leaders of the rebellion were gruesomely executed, setting a harch example for other northern lords."
  sca_event_2_opt:0 "Blood Eagle for all traitors!"
+ sca_event_3_title:0 "Kirunavaara"
+ sca_event_3_desc:0 "Our miners have founds an immense deposit of iron in the mountain of Kirunavaara. This will be a significant source of income for the empire for a long long time."
+ sca_event_3_opt:0 "To the mines!"

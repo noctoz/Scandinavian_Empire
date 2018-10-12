@@ -48,3 +48,32 @@ country_event = {
 		}
 	}
 }
+
+# Kirunavaara
+province_event = {
+	id = sca_events.3
+	title = "sca_event_3_title"
+	desc = "sca_event_3_desc"
+	picture = TRADEGOODS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SCA
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {
+		name = "sca_event_3_opt" #this is the pointer to the localisation
+		4114 = {
+			add_permanent_province_modifier = {
+				name = kirunavaara_modifier
+				duration = -1
+				desc = desc_kirunavaara_modifier
+			}
+		}
+	}
+}
