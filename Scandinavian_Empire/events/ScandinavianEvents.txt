@@ -59,7 +59,9 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = SCA
+		owner = {
+			tag = SCA
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -80,7 +82,7 @@ province_event = {
 
 # The Walloons in Sweden
 country_event = {
-	id = sca_events.6
+	id = sca_events.4
 	title = "flavor_swe.EVTNAME3227"
 	desc = "flavor_swe.EVTDESC3227"
 	picture = INVENTION_eventPicture
@@ -131,9 +133,9 @@ country_event = {
 
 # The Great Army Reorganization
 country_event = {
-	id = sca_events.9
+	id = sca_events.5
 	title = "flavor_swe.EVTNAME3244"
-	desc = "sca_event_9_desc"
+	desc = "sca_event_5_desc"
 	picture = MILITARY_CAMP_eventPicture
 
 
@@ -168,16 +170,16 @@ country_event = {
 
 # The Great Agricultural Reform
 country_event = {
-	id = sca_events.10
+	id = sca_events.6
 	title = "flavor_swe.EVTNAME3264"
-	desc = "sca_event_10_desc"
+	desc = "sca_event_6_desc"
 	picture = REFORM_eventPicture
 
 
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
+		tag = SCA
 		is_year = 1700
 	}
 
@@ -197,5 +199,168 @@ country_event = {
 		name = "flavor_swe.EVTOPTB3264"
 		ai_chance = { factor = 10 }
 		add_stability_or_adm_power = yes
+	}
+}
+
+# The Great Naval Reform
+country_event = {
+	id = sca_events.7
+	title = "flavor_dan.EVTNAME3288"
+	desc = "sca_event_7_desc"
+	picture = NAVAL_MILITARY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SCA
+		is_year = 1500
+		12 = {
+			owned_by = SCA
+		}
+		13 = {
+			owned_by = SCA
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	option = {
+		name = "flavor_dan.EVTOPTA3288" # Reform the Navy
+		add_navy_tradition = 25
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
+		
+		12 = {
+			add_permanent_province_modifier = {
+				name = home_of_the_scandinavian_navy_modifier
+				duration = -1
+			}
+		}
+		13 = {
+			add_permanent_province_modifier = {
+				name = good_oak_supply_modifier
+				duration = -1
+			}
+		}
+	}
+}
+
+# The Search for Metals in the Skands
+country_event = {
+	id = sca_events.8
+	title = "flavor_nor.17.t"
+	desc = "sca_event_8_desc"
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SCA
+		owns = 17
+		owns = 20
+		is_year = 1550
+	}
+	
+	mean_time_to_happen = {
+		months = 150
+	}
+	
+	option = {
+		name = "flavor_nor.17.a" #Costly but lets you get goodies later
+		ai_chance = {
+			factor = 1
+		}
+		custom_tooltip = flavor_nor.17.a.tt
+		add_years_of_income = -1
+		add_country_modifier = {
+			name = "sca_prospecting_the_skands"
+			duration = 29200
+		}
+	}
+	option = {
+		name = "flavor_nor.17.b" #Cheap but low reward.
+		ai_chance = {
+			factor = 0
+		}
+		add_prestige = 5
+	}
+}
+
+# Copper found at Røros
+country_event = {
+	id = sca_events.9
+	title = "flavor_nor.19.t"
+	desc = "flavor_nor.19.d"
+	picture = TRADEGOODS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_modifier = sca_prospecting_the_skands
+		owns = 20
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	
+	option = {
+		name = "flavor_nor.19.a"
+		ai_chance = {
+			factor = 75
+		}
+		20 = { change_trade_goods = copper }
+		add_adm_power = -50
+	}
+	option = {
+		name = "flavor_nor.19.b"
+		ai_chance = {
+			factor = 25
+		}
+		20 = { add_base_production = 1 }
+	}
+}
+
+# Silver found in Sandsvær
+country_event = {
+	id = sca_events.10
+	title = "flavor_nor.20.t"
+	desc = "flavor_nor.20.d"
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_modifier = sca_prospecting_the_skands
+		owns = 17
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	
+	option = {
+		name = "flavor_nor.20.a"
+		ai_chance = {
+			factor = 75
+		}
+		add_treasury = -300
+		add_adm_power = -50
+		17 = {
+			add_permanent_province_modifier = {
+				name = nor_kongsberg_mine
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = "flavor_nor.20.b"
+		ai_chance = {
+			factor = 25
+		}
+		17 = { add_base_production = 1 }
 	}
 }

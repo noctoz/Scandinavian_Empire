@@ -89,3 +89,15 @@ well_drilled_armies_modifier = {
 	drill_gain_modifier = 0.2
 	drill_decay_modifier = -0.1
 }
+
+good_oak_supply_modifier = {
+	local_ship_cost = -0.2
+}
+
+home_of_the_scandinavian_navy_modifier = {
+	local_sailors_modifier = 0.3
+}
+
+sca_prospecting_the_skands = {
+	global_tax_income = -12
+}
