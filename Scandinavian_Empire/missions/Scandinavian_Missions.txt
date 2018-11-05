@@ -177,27 +177,6 @@ sca_empire = {
 			}
 		}
 	}
-	conquer_russia = {
-		icon = mission_conquer_50_development
-		required_missions = { integrate_estonia }
-		position = 10
-		provinces_to_highlight = {
-			region = russia_region
-		}
-		trigger = {
-			russia_region = {
-				type = all
-				owned_by = ROOT
-			}
-		}
-		effect = {
-			add_prestige = 50 
-			add_country_modifier = {
-				name = "russian_integration"
-				duration = 9125 #25 years
-			}
-		}
-	}
 }
 
 fortifying_scandinavia = {
@@ -1006,74 +985,101 @@ sca_in_the_new_world = {
 			}
 		}
 	}
-	new_luxuries = {
-		icon = mission_trade_company_region_abroad
-		required_missions = { }
-		position = 6
-		provinces_to_highlight = {
-			OR = {
-				area = windward_islands_area
-				area = leeward_islands_area
-				area = cumana_area
-				province_id = 2013
-				province_id = 970
-				province_id = 968
-				province_id = 2561
-				province_id = 967
-			}
-		}
-		trigger = {
-			sugar = 1
-			coffee = 1
-			tobacco = 1
-		}
-		effect = {
-			add_country_modifier = {
-				name = "more_merchants"
-				duration = -1
-			}
-		}
-	}
-	exotic_tastes = {
-		icon = mission_trade_company_region_abroad
+	sca_expand_east = {
+		icon = mission_conquer_50_development
 		required_missions = { }
 		position = 7
 		provinces_to_highlight = {
 			OR = {
-				region = central_america_region 
+				area = novgorod_area
+				area = pskov_area
+				area = tver_area
 			}
 		}
 		trigger = {
-			spices = 1
-			cocoa = 1
-		}
-		effect = {
-			add_country_modifier = {
-				name = "more_merchants"
-				duration = -1
+			pskov_area = {
+				type = all
+				owned_by = ROOT
+			}
+			pskov_area = {
+				type = all
+				owned_by = ROOT
+			}
+			tver_area = {
+				type = all
+				owned_by = ROOT
 			}
 		}
+		effect = {
+			add_prestige = 50
+		}
 	}
-	exclusive_desires = {
-		icon = mission_trade_company_region_abroad
-		required_missions = { }
+	securing_white_sea = {
+		icon = mission_conquer_50_development
+		required_missions = { sca_expand_east }
 		position = 8
 		provinces_to_highlight = {
 			OR = {
-				area = guinea_coast_area
-				area = west_africa_coast_area
-				province_id = 1166
+				area = pomor_area
+				area = arkhangelsk_area
+				area = beloozero_area
 			}
 		}
 		trigger = {
-			ivory = 1
-			dyes = 1
-			gems = 1
+			pomor_area = {
+				type = all
+				owned_by = ROOT
+			}
+			arkhangelsk_area = {
+				type = all
+				owned_by = ROOT
+			}
+			beloozero_area = {
+				type = all
+				owned_by = ROOT
+			}
 		}
 		effect = {
+			add_prestige = 50
+		}
+	}
+	conquer_moscow = {
+		icon = mission_conquer_50_development
+		required_missions = { securing_white_sea }
+		position = 9
+		provinces_to_highlight = {
+			OR = {
+				area = moscow_area
+			}
+		}
+		trigger = {
+			moscow_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 50
+		}
+	}
+	conquer_russia = {
+		icon = mission_conquer_50_development
+		required_missions = { conquer_moscow }
+		position = 10
+		provinces_to_highlight = {
+			region = russia_region
+		}
+		trigger = {
+			russia_region = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 50 
 			add_country_modifier = {
-				name = "more_merchants"
-				duration = 1
+				name = "russian_integration"
+				duration = 9125 #25 years
 			}
 		}
 	}
