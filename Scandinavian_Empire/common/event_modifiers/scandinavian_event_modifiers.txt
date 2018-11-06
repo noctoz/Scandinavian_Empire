@@ -48,7 +48,7 @@ crushed_danish_rebellion_modifier = {
 }
 
 finland_reclaimed_modifier = {
-	reduced_liberty_desire = 5
+	reduced_liberty_desire = 50
 }
 
 norway_reclaimed_modifier = {

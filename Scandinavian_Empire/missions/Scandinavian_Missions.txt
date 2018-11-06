@@ -37,7 +37,7 @@ sca_empire = {
 		effect = {
 			add_country_modifier = {
 				name = "finland_reclaimed_modifier"
-				duration = -1
+				duration = 18250 # 50 years
 			}
 			add_dip_power = 100
 		}

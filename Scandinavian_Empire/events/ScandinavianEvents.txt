@@ -40,7 +40,7 @@ country_event = {
 		SCA = {
 			add_country_modifier = { 
 				name = crushed_danish_rebellion_modifier
-				duration = 9125 # 25 years
+				duration = 18250 # 50 years
 			}
 		}
 		DAN = {
