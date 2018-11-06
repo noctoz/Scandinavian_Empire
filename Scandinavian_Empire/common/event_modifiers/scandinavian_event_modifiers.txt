@@ -49,21 +49,24 @@ crushed_danish_rebellion_modifier = {
 
 finland_reclaimed_modifier = {
 	reduced_liberty_desire = 50
+	diplomatic_annexation_cost = -0.3
 }
 
 norway_reclaimed_modifier = {
 	global_ship_recruit_speed = -0.1
 	naval_attrition = -0.1
+	diplomatic_annexation_cost = -0.1
 }
 
 denmark_reclaimed_modifier = {
-	diplomatic_annexation_cost = -0.2
+	diplomatic_annexation_cost = -0.1
 	trade_efficiency = 0.05
 }
 
 pommerania_reclaimed_modifier = {
 	trade_efficiency = 0.05
 	trade_range_modifier = 0.1
+	diplomatic_annexation_cost = -0.1
 }
 
 scandinavia_reunited_modifier = {
@@ -77,7 +80,7 @@ blessed_by_njord_modifier = {
 
 blessed_by_freya_modifier = {
 	global_tax_modifier = 0.2
-	global_trade_power = 0.2
+	global_manpower_power = 0.2
 }
 
 wood_industry_hub_modifier = {
