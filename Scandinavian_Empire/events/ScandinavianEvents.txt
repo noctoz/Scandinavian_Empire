@@ -12,6 +12,7 @@ country_event = {
 
 	option = {
 		name = "sca_event_1_opt" #this is the pointer to the localisation
+		set_country_flag = sca_danish_rebellion_flag
 		DAN = {
 			declare_war_with_cb = {
 				who = ROOT
@@ -29,10 +30,15 @@ country_event = {
 	picture = WOUNDED_SOLDIERS_eventPicture
 
 	fire_only_once = yes
-	is_triggered_only = yes
 	
 	trigger = {
 		tag = SCA
+		NOT = { war_with = DAN }
+		has_country_flag = sca_danish_rebellion_flag
+	}
+	
+	mean_time_to_happen = {
+		days = 1
 	}
 
 	option = {
@@ -362,5 +368,73 @@ country_event = {
 			factor = 25
 		}
 		17 = { add_base_production = 1 }
+	}
+}
+
+# Pommeranian and Estonian rebellion
+country_event = {
+	id = sca_events.11
+	title = "sca_event_11_title"
+	desc = "sca_event_11_desc"
+	picture = SIEGE_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_modifier = denmark_reclaimed_modifier
+		EST = { vassal_of = ROOT }
+		POM = { vassal_of = ROOT }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "sca_event_11_opt" #this is the pointer to the localisation
+		set_country_flag = sca_pom_est_independence_war_flag
+		POM = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_independence_war
+			}
+		}
+		EST = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_independence_war
+			}
+		}
+	}
+}
+
+# End of Pommeranian and Estonian rebellion
+country_event = {
+	id = sca_events.12
+	title = "sca_event_12_title"
+	desc = "sca_event_12_desc"
+	picture = WOUNDED_SOLDIERS_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SCA
+		NOT = { war_with = POM }
+		NOT = { war_with = EST }
+		has_country_flag = sca_pom_est_independence_war_flag
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "sca_event_12_opt" #this is the pointer to the localisation
+		SCA = {
+			add_country_modifier = { 
+				name = sca_increased_unity_modifier
+				duration = 18250 # 50 years
+			}
+		}
 	}
 }

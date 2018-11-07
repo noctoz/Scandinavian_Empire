@@ -45,11 +45,18 @@ gateway_to_america_modifier = {
 
 crushed_danish_rebellion_modifier = {
 	reduced_liberty_desire = 50
+	diplomatic_annexation_cost = -0.2
+}
+
+sca_increased_unity_modifier = {
+	reduced_liberty_desire = 50
+	diplomatic_annexation_cost = -0.3
 }
 
 finland_reclaimed_modifier = {
-	reduced_liberty_desire = 50
-	diplomatic_annexation_cost = -0.3
+	global_manpower_modifier = 0.1
+	drill_decay_modifier = -0.1
+	diplomatic_annexation_cost = -0.1
 }
 
 norway_reclaimed_modifier = {
@@ -59,8 +66,8 @@ norway_reclaimed_modifier = {
 }
 
 denmark_reclaimed_modifier = {
-	diplomatic_annexation_cost = -0.1
 	trade_efficiency = 0.05
+	diplomatic_annexation_cost = -0.1
 }
 
 pommerania_reclaimed_modifier = {

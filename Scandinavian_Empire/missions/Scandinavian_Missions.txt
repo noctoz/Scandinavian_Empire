@@ -39,6 +39,10 @@ sca_empire = {
 				name = "finland_reclaimed_modifier"
 				duration = -1
 			}
+			add_country_modifier = {
+				name = sca_increased_unity_modifier
+				duration = -1
+			}
 			add_dip_power = 100
 		}
 	}
@@ -46,7 +50,6 @@ sca_empire = {
 		icon = mission_unite_home_region
 		required_missions = { 
 			securing_the_east
-			sca_vassal_opinion
 		}
 		position = 3
 		provinces_to_highlight = {
@@ -107,6 +110,7 @@ sca_empire = {
 				name = "denmark_reclaimed_modifier"
 				duration = -1
 			}
+			remove_country_modifier = sca_increased_unity_modifier
 			add_dip_power = 100
 		}
 	}
@@ -175,7 +179,7 @@ sca_empire = {
 				name = "scandinavia_reunited_modifier"
 				duration = -1
 			}
-			remove_country_modifier = finland_reclaimed_modifier
+			remove_country_modifier = sca_increased_unity_modifier
 		}
 	}
 }
@@ -226,6 +230,62 @@ fortifying_scandinavia = {
 			}
 		}
 	}
+	scandinavian_manpower = {
+		icon = mission_build_up_to_force_limit
+		required_missions = {
+			securing_the_east
+		}
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = north_karelia
+				area = subarctic_islands_area 
+			}
+		}
+		trigger = {
+			north_karelia = {
+				type = all
+				owned_by = ROOT
+				has_state_edict = promote_military_recruitment
+			}
+			subarctic_islands_area = {
+				type = all
+				owned_by = ROOT
+				has_state_edict = promote_military_recruitment
+			}
+			32 = {
+				has_building = barracks
+				base_manpower = 3
+				has_estate = estate_nobles
+			}
+			309 = {
+				has_building = barracks
+				base_manpower = 3
+				has_estate = estate_nobles
+			}
+			4124 = {
+				has_building = barracks
+				base_manpower = 3
+				has_estate = estate_nobles
+			}
+			1476 = { # Färöarna
+				has_building = barracks
+				base_manpower = 3
+				has_estate = estate_nobles
+			}
+			1978 = { # Shetland
+				has_building = barracks
+				base_manpower = 4
+				has_estate = estate_nobles
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = army_enthusiasm
+				duration = -1
+			}
+		}
+	}
 	atlantic_ports = {
 		icon = mission_establish_high_seas_navy
 		required_missions = { integrate_norway }
@@ -235,6 +295,9 @@ fortifying_scandinavia = {
 				has_building = shipyard
 			}
 			17 = { # Akershus
+				has_building = shipyard
+			}
+			24 = { # Stavanger
 				has_building = shipyard
 			}
 			1984 = { #Nordjylland
@@ -249,6 +312,12 @@ fortifying_scandinavia = {
 				}
 			}
 			17 = { # Akershus
+				add_province_modifier = {
+					name = "blessed_by_njord_modifier"
+					duration = -1
+				}
+			}
+			24 = { # Stavanger
 				add_province_modifier = {
 					name = "blessed_by_njord_modifier"
 					duration = -1
@@ -562,10 +631,51 @@ developing_scandinavia = {
 	}
 	has_country_shield = yes
 	
-	ore_is_our_core = {
-		icon = mission_high_income
+	sca_build_for_the_future = {
+		icon = mission_early_game_buildings
 		required_missions = { }
 		position = 1
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1
+				province_id = 2
+				province_id = 7
+				province_id = 4
+				province_id = 8
+				province_id = 4114
+			}
+		}
+		trigger = {
+			1 = { #Stockholm
+				has_building = temple
+			}
+			2 = { #Östergötland
+				has_building = temple
+			}
+			7 = { #Skaraborg
+				has_building = temple
+			}
+			4 = { #Bergslagen
+				has_building = workshop
+			}
+			8 = { #Dalaskogen
+				has_building = workshop
+			}
+			4114 = { #Jokkmokk
+				has_building = workshop
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "blessed_by_freya_modifier"
+				duration = 3650 # 10 years
+			}
+		}
+	}
+	ore_is_our_core = {
+		icon = mission_high_income
+		required_missions = { sca_build_for_the_future }
+		position = 2
 		provinces_to_highlight = {
 			OR = {
 				province_id = 4
@@ -589,7 +699,7 @@ developing_scandinavia = {
 				base_production = 6
 			}
 			4114 = { #Jokkmokk
-				base_production = 6
+				base_production = 5
 			}
 		}
 		effect = {
@@ -625,67 +735,49 @@ developing_scandinavia = {
 			}
 		}
 	}
-	sca_build_for_the_future = {
+	sca_build_marketplaces = {
 		icon = mission_early_game_buildings
 		required_missions = { ore_is_our_core }
-		position = 2
-		provinces_to_highlight = {
-			OR = {
-				province_id = 1
-				province_id = 2
-				province_id = 7
-				province_id = 12
-				province_id = 44
-			}
-		}
-		trigger = {
-			1 = { #Stockholm
-				has_building = temple
-			}
-			2 = { #Östergötland
-				has_building = temple
-			}
-			7 = { #Skaraborg
-				has_building = temple
-			}
-			12 = { #Själland
-				has_building = marketplace
-			}
-			44 = { #Hamburg
-				has_building = marketplace
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = "blessed_by_freya_modifier"
-				duration = 3650 # 10 years
-			}
-		}
-	}
-	sca_build_workshops = {
-		icon = mission_early_game_buildings
-		required_missions = { sca_build_for_the_future }
 		position = 3
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1
-				province_id = 6
-				province_id = 8
-				province_id = 4114
+				province_id = 25
+				province_id = 4163
+				province_id = 12
+				province_id = 17
+				province_id = 20
+				province_id = 23
 			}
 		}
 		trigger = {
+			owns = 1
+			owns = 25
+			owns = 4163
+			owns = 12
+			owns = 17
+			owns = 20
+			owns = 23
 			1 = { #Stockholm
-				has_building = workshop
+				has_building = marketplace
 			}
-			6 = { #Skåne
-				has_building = workshop
+			25 = { #Gotland
+				has_building = marketplace
 			}
-			8 = { #Dalaskogen
-				has_building = workshop
+			4163 = { #Elfsborg
+				has_building = marketplace
 			}
-			4114 = { #Jokkmokk
-				has_building = workshop
+			12 = { #Själland
+				has_building = marketplace
+			}
+			17 = { #Akershus
+				has_building = marketplace
+			}
+			20 = { #Trondelag
+				has_building = marketplace
+			}
+			23 = { #Bergenhus
+				has_building = marketplace
 			}
 		}
 		effect = {
@@ -697,7 +789,7 @@ developing_scandinavia = {
 	}
 	sca_build_manufactories = {
 		icon = mission_have_manufactories
-		required_missions = { sca_build_workshops }
+		required_missions = { sca_build_marketplaces }
 		position = 4
 		provinces_to_highlight = {
 			OR = {
