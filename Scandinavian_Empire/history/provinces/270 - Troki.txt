@@ -1,18 +1,19 @@
 #270 Troki
 
-owner = EST
-controller = EST
+owner = LVA
+controller = LVA
 religion = norse_pagan_reformed
-culture = estonian
+culture = latvian
 capital = "Trakai"
 trade_goods = livestock
 hre = no
-base_tax = 4
-base_production = 3
+base_tax = 2
+base_production = 2
 base_manpower = 4 
 is_city = yes
 fort_15th = yes #Trakai Castles "Little Marienburg"
-add_core = EST
+add_core = LVA
+add_core = SCA
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim

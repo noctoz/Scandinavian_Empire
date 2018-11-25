@@ -1,13 +1,14 @@
 #Riga Bight, incl. the city of Riga, and Dünamünde.
 
-owner = EST
-controller = EST
-add_core = EST
-culture = estonian
+owner = LVA
+controller = LVA
+add_core = LVA
+add_core = SCA
+culture = latvian
 religion = norse_pagan_reformed
 hre = no
 base_tax = 6 
-base_production = 6
+base_production = 8
 trade_goods = naval_supplies
 base_manpower = 4
 capital = "Riga"

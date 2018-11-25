@@ -371,7 +371,7 @@ country_event = {
 	}
 }
 
-# Pommeranian and Estonian rebellion
+# Baltic rebellion
 country_event = {
 	id = sca_events.11
 	title = "sca_event_11_title"
@@ -381,19 +381,19 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_country_modifier = denmark_reclaimed_modifier
+		has_country_modifier = prussia_reclaimed_modifier
 		EST = { vassal_of = ROOT }
-		POM = { vassal_of = ROOT }
+		LVA = { vassal_of = ROOT }
 	}
 	
 	mean_time_to_happen = {
-		months = 6
+		months = 1
 	}
 	
 	option = {
 		name = "sca_event_11_opt" #this is the pointer to the localisation
-		set_country_flag = sca_pom_est_independence_war_flag
-		POM = {
+		set_country_flag = sca_baltic_independence_war_flag
+		LVA = {
 			declare_war_with_cb = {
 				who = ROOT
 				casus_belli = cb_independence_war
@@ -408,7 +408,7 @@ country_event = {
 	}
 }
 
-# End of Pommeranian and Estonian rebellion
+# End of Baltic rebellion
 country_event = {
 	id = sca_events.12
 	title = "sca_event_12_title"
@@ -419,9 +419,9 @@ country_event = {
 	
 	trigger = {
 		tag = SCA
-		NOT = { war_with = POM }
+		NOT = { war_with = LVA }
 		NOT = { war_with = EST }
-		has_country_flag = sca_pom_est_independence_war_flag
+		has_country_flag = sca_baltic_independence_war_flag
 	}
 	
 	mean_time_to_happen = {

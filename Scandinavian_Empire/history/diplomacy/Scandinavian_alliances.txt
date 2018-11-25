@@ -8,20 +8,6 @@ vassal = {
 
 vassal = {
 	first = SCA
-	second = POM
-	start_date = 1444.1.1
-	end_date = 1821.01.01
-}
-
-vassal = {
-	first = SCA
-	second = EST
-	start_date = 1444.1.1
-	end_date = 1821.01.01
-}
-
-vassal = {
-	first = SCA
 	second = FIN
 	start_date = 1444.1.1
 	end_date = 1821.01.01

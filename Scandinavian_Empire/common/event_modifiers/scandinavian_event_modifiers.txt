@@ -13,7 +13,7 @@ jewel_of_the_north_modifier = {
 
 viking_empire_legacy_modifier = {
 	merchants = 1
-	diplomatic_upkeep = 1
+	diplomatic_upkeep = 2
 	army_tradition_decay = -0.02
 	army_tradition = 1
 	navy_tradition_decay = -0.02
@@ -44,36 +44,44 @@ gateway_to_america_modifier = {
 }
 
 crushed_danish_rebellion_modifier = {
-	reduced_liberty_desire = 50
+	reduced_liberty_desire = 40
 	diplomatic_annexation_cost = -0.2
 }
 
 sca_increased_unity_modifier = {
-	reduced_liberty_desire = 50
-	diplomatic_annexation_cost = -0.3
+	reduced_liberty_desire = 40
+	diplomatic_annexation_cost = -0.2
 }
 
 finland_reclaimed_modifier = {
 	global_manpower_modifier = 0.1
-	drill_decay_modifier = -0.1
-	diplomatic_annexation_cost = -0.1
+	diplomatic_annexation_cost = -0.05
 }
 
 norway_reclaimed_modifier = {
 	global_ship_recruit_speed = -0.1
 	naval_attrition = -0.1
-	diplomatic_annexation_cost = -0.1
+	diplomatic_annexation_cost = -0.05
 }
 
 denmark_reclaimed_modifier = {
-	trade_efficiency = 0.05
-	diplomatic_annexation_cost = -0.1
+	trade_range_modifier = 0.2
+	diplomatic_annexation_cost = -0.05
 }
 
 pommerania_reclaimed_modifier = {
 	trade_efficiency = 0.05
-	trade_range_modifier = 0.1
-	diplomatic_annexation_cost = -0.1
+	diplomatic_annexation_cost = -0.05
+}
+
+prussia_reclaimed_modifier = {
+	drill_decay_modifier = -0.2
+	diplomatic_annexation_cost = -0.05
+}
+
+estonia_reclaimed_modifier = {
+	technology_cost = -0.1
+	diplomatic_annexation_cost = -0.05
 }
 
 scandinavia_reunited_modifier = {
@@ -103,6 +111,7 @@ well_drilled_armies_modifier = {
 
 good_oak_supply_modifier = {
 	local_ship_cost = -0.2
+	ship_recruit_speed = -0.25
 }
 
 home_of_the_scandinavian_navy_modifier = {

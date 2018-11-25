@@ -6,10 +6,10 @@ add_core = POM
 culture = pommeranian
 religion = norse_pagan_reformed
 hre = no
-base_tax = 3
+base_tax = 2
 base_production = 3
 trade_goods = cloth
-base_manpower = 3
+base_manpower = 2
 capital = "Wismar"
 is_city = yes
 

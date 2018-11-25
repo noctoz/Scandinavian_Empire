@@ -112,6 +112,11 @@ sca_empire = {
 			}
 			remove_country_modifier = sca_increased_unity_modifier
 			add_dip_power = 100
+			add_casus_belli = {
+				target = POM
+				type = cb_vassalize_mission
+				months = 240 # 20 years
+			}
 		}
 	}
 	integrate_pommerania = {
@@ -125,54 +130,106 @@ sca_empire = {
 			owned_by = POM
 		}
 		trigger = {
-			owns = 40
-			owns = 41
-			owns = 42
-			owns = 43
-			owns = 45
-			owns = 46
-			owns = 47
-			owns = 48
-			owns = 767
-			owns = 1841
-			owns = 1858
-			owns = 2958
-			owns = 2993
-			owns = 2994
-			owns = 2995
-			owns = 2996
+			owns = 45 # Lubeck
+			owns = 46 # Rostock
+			owns = 47 # Stralsund
+			owns = 48 # Kolberg
+			owns = 1858 # Stettin
+			owns = 2993 # Uckermark
+			owns = 2994 # Greifswald
+			owns = 2995 # Stolp
+			owns = 2996 # Wismar
 		}
 		effect = {
 			add_country_modifier = {
 				name = "pommerania_reclaimed_modifier"
 				duration = -1
 			}
+			add_casus_belli = {
+				target = PRU
+				type = cb_vassalize_mission
+				months = 240 # 20 years
+			}
+		}
+	}
+	integrate_prussia = {
+		icon = mission_unite_home_region
+		required_missions = {
+			integrate_pommerania
+		}
+		position = 7
+		provinces_to_highlight = {
+			owned_by = PRU
+		}
+		trigger = {
+			owns = 40
+			owns = 41
+			owns = 42
+			owns = 43
+			owns = 767
+			owns = 1841
+			owns = 2958
+		}
+		effect = {
+			add_country_modifier = {
+				name = "prussia_reclaimed_modifier"
+				duration = -1
+			}
+			add_casus_belli = {
+				target = EST
+				type = cb_vassalize_mission
+				months = 240 # 20 years
+			}
 		}
 	}
 	integrate_estonia = {
 		icon = mission_unite_home_region
-		required_missions = { integrate_pommerania }
-		position = 7
+		required_missions = { integrate_prussia }
+		position = 8
 		provinces_to_highlight = {
 			owned_by = EST
 		}
 		trigger = {
-			owns = 33
-			owns = 34
-			owns = 35
-			owns = 36
-			owns = 37
-			owns = 38
-			owns = 39
-			owns = 270
-			owns = 271
-			owns = 273
-			owns = 1834
-			owns = 1842
-			owns = 1935
-			owns = 1936
-			owns = 1961
-			owns = 4241
+			owns = 30 # Viborg
+			owns = 33 # Neva
+			owns = 34 # Ingermanland
+			owns = 36 # Estland
+			owns = 1834 # Dorpat
+			owns = 1842 # Narva
+			owns = 1935 # Ladoga
+		}
+		effect = {
+			add_country_modifier = {
+				name = "estonia_reclaimed_modifier"
+				duration = -1
+			}
+			add_casus_belli = {
+				target = LVA
+				type = cb_vassalize_mission
+				months = 240 # 20 years
+			}
+			remove_country_modifier = sca_increased_unity_modifier
+		}
+	}
+	integrate_livonia = {
+		icon = mission_unite_home_region
+		required_missions = { integrate_estonia }
+		position = 9
+		provinces_to_highlight = {
+			owned_by = LVA
+		}
+		trigger = {
+			owns = 35 # Osel
+			owns = 37 # Livland
+			owns = 38 # Riga
+			owns = 39 # Kurland
+			owns = 270 # Troki
+			owns = 271 # Samognita
+			owns = 273 # Latgalia
+			owns = 1935 # Semigallia
+			owns = 1936 # Kovno
+			owns = 4241 # Wenden
+			owns = 4534 # Upita
 		}
 		effect = {
 			add_country_modifier = {
@@ -243,16 +300,6 @@ fortifying_scandinavia = {
 			}
 		}
 		trigger = {
-			north_karelia = {
-				type = all
-				owned_by = ROOT
-				has_state_edict = promote_military_recruitment
-			}
-			subarctic_islands_area = {
-				type = all
-				owned_by = ROOT
-				has_state_edict = promote_military_recruitment
-			}
 			32 = {
 				has_building = barracks
 				base_manpower = 3
@@ -268,7 +315,7 @@ fortifying_scandinavia = {
 				base_manpower = 3
 				has_estate = estate_nobles
 			}
-			1476 = { # Färöarna
+			1979 = { # Färöarna
 				has_building = barracks
 				base_manpower = 3
 				has_estate = estate_nobles
@@ -278,6 +325,11 @@ fortifying_scandinavia = {
 				base_manpower = 4
 				has_estate = estate_nobles
 			}
+			owns = 32
+			owns = 309
+			owns = 4124
+			owns = 1979
+			owns = 1978
 		}
 		effect = {
 			add_country_modifier = {
@@ -290,6 +342,14 @@ fortifying_scandinavia = {
 		icon = mission_establish_high_seas_navy
 		required_missions = { integrate_norway }
 		position = 4
+		provinces_to_highlight = {
+			OR = {
+				province_id = 16
+				province_id = 17
+				province_id = 24
+				province_id = 1984
+			}
+		}
 		trigger = {
 			16 = { # Bohuslän
 				has_building = shipyard
@@ -361,7 +421,7 @@ fortifying_scandinavia = {
 	}
 	power_of_the_north = {
 		icon = mission_assemble_an_army
-		required_missions = { integrate_estonia }
+		required_missions = { integrate_prussia }
 		position = 8
 		trigger = {
 			army_size = 200
@@ -437,11 +497,7 @@ sca_diplomacy_and_trade = {
 				value = 180
 			}
 			reverse_has_opinion = {
-				who = POM
-				value = 180
-			}
-			reverse_has_opinion = {
-				who = EST
+				who = DAN
 				value = 180
 			}
 		}

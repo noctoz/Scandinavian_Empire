@@ -34,3 +34,9 @@ Map changes:
 - Aukstaitija (lithuania_area) moved from Baltic to Ruthenia
 - White Karelia (1776) moved from Pomorye (pomor_area) to Ostrobothnia (bothnia_area)
 - Tuchel (2997) moved from West Prussia (west_prussia_area) to Kuyavia (kuyavia_area)
+
+Culture changes:
+- Pommeranian moved to Scandinavian group
+- Estonian moved to Scandinavian group
+- Latvian moved to Scandinavian group
+- Prussian moved to Scandinavian group

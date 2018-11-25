@@ -1,11 +1,11 @@
 government = monarchy
 add_government_reform = feudalism_reform
-government_rank = 2
+government_rank = 1
 technology_group = western
 religion = norse_pagan_reformed
 primary_culture = estonian
 clear_scripted_personalities = yes
-capital = 38 # Riga
+capital = 33 # Noteborg
 1439.8.12 = {
 	monarch = {
 		name = "Rikulfr"

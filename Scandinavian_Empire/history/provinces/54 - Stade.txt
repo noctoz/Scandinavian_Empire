@@ -7,9 +7,9 @@ religion = norse_pagan_reformed
 capital = "Bremervörde"
 trade_goods = fish
 hre = no
-base_tax = 3
-base_production = 3
-base_manpower = 4
+base_tax = 2
+base_production = 2
+base_manpower = 3
 is_city = yes
 add_core = DAN
 

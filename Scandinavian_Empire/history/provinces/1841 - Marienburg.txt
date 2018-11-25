@@ -1,17 +1,18 @@
 #Marienburg
 
-owner = POM
-controller = POM
+owner = PRU
+controller = PRU
 capital = "Marienburg"
-culture = pommeranian
+culture = prussian
 religion = norse_pagan_reformed
 trade_goods = naval_supplies
 hre = no
-base_tax = 4
-base_production = 4
+base_tax = 3
+base_production = 3
 base_manpower = 6
 is_city = yes
-add_core = POM
+add_core = PRU
+add_core = SCA
 fort_15th = yes
 estate = estate_nobles
 
