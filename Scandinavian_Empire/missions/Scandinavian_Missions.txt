@@ -508,10 +508,29 @@ sca_diplomacy_and_trade = {
 			}
 		}
 	}
+	sca_protect_the_south = {
+		icon = mission_alliances
+		required_missions = {
+			sca_vassal_opinion
+		}
+		position = 3
+		trigger = {
+			has_guaranteed = POM
+			has_guaranteed = PRU
+			has_guaranteed = EST
+			has_guaranteed = LVA
+		}
+		effect = {
+			add_country_modifier = {
+				name = "diplomatic_moves"
+				duration = 18250 #50 years
+			}
+		}
+	}
 	sca_and_fri = {
 		icon = mission_alliances
-		required_missions = { sca_vassal_opinion }
-		position = 3
+		required_missions = { sca_and_fri }
+		position = 4
 		trigger = {
 			alliance_with = FRI
 		}
@@ -521,23 +540,6 @@ sca_diplomacy_and_trade = {
 				duration = 18250 #50 years
 			}
 			add_dip_power = 50
-		}
-	}
-	sca_and_lit = {
-		icon = mission_alliances
-		required_missions = {
-			sca_and_fri 
-			integrate_norway
-		}
-		position = 4
-		trigger = {
-			alliance_with = LIT
-		}
-		effect = {
-			add_country_modifier = {
-				name = "influential_diplomacy"
-				duration = 3650 # 10 years
-			}
 		}
 	}
 	sca_powerful_allies = {

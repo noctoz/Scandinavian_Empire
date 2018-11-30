@@ -20,5 +20,4 @@ capital = 33 # Noteborg
 1444.11.11 = {
 	add_treasury = 42
 	add_prestige = 3606
-	add_truce_with = SCA
 }

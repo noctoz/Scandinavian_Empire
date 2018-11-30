@@ -121,3 +121,7 @@ home_of_the_scandinavian_navy_modifier = {
 sca_prospecting_the_skands = {
 	global_tax_income = -12
 }
+
+prussian_rebels_modifier = {
+	merc_maintenance_modifier = -0.9
+}

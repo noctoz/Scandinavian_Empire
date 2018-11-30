@@ -40,3 +40,6 @@ Culture changes:
 - Estonian moved to Scandinavian group
 - Latvian moved to Scandinavian group
 - Prussian moved to Scandinavian group
+
+On Actions Added:
+- End of Baltic uprising (on_peace_recipient)

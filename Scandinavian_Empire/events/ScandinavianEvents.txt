@@ -30,15 +30,12 @@ country_event = {
 	picture = WOUNDED_SOLDIERS_eventPicture
 
 	fire_only_once = yes
+	is_triggered_only = yes
 	
 	trigger = {
 		tag = SCA
 		NOT = { war_with = DAN }
 		has_country_flag = sca_danish_rebellion_flag
-	}
-	
-	mean_time_to_happen = {
-		days = 1
 	}
 
 	option = {
@@ -371,51 +368,102 @@ country_event = {
 	}
 }
 
-# Baltic rebellion
+# Unrest in the east
 country_event = {
 	id = sca_events.11
 	title = "sca_event_11_title"
 	desc = "sca_event_11_desc"
-	picture = SIEGE_eventPicture
+	picture = BORDER_TENSION_eventPicture
 
 	fire_only_once = yes
 	
 	trigger = {
 		has_country_modifier = prussia_reclaimed_modifier
-		EST = { vassal_of = ROOT }
-		LVA = { vassal_of = ROOT }
+		exists = EST
+		exists = LVA
+		OR = {
+			exists = RUS
+			exists = MOS
+		}
+		NOT = {
+			OR = {
+				EST = { vassal_of = ROOT }
+				LVA = { vassal_of = ROOT }
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
-		months = 1
+		months = 4
 	}
 	
 	option = {
 		name = "sca_event_11_opt" #this is the pointer to the localisation
-		set_country_flag = sca_baltic_independence_war_flag
+		EST = {
+			form_coalition_against = SCA
+		}
 		LVA = {
-			declare_war_with_cb = {
-				who = ROOT
-				casus_belli = cb_independence_war
+			form_coalition_against = SCA
+		}
+		if = {
+			limit = {
+				exists = RUS
+			}
+			RUS = {
+				form_coalition_against = SCA
 			}
 		}
-		EST = {
-			declare_war_with_cb = {
-				who = ROOT
-				casus_belli = cb_independence_war
+		if = {
+			limit = {
+				exists = MOS
+			}
+			MOS = {
+				form_coalition_against = SCA
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = sca_events.12 # Baltic Uprising
 			}
 		}
 	}
 }
 
-# End of Baltic rebellion
+# Baltic uprising
 country_event = {
 	id = sca_events.12
 	title = "sca_event_12_title"
 	desc = "sca_event_12_desc"
+	picture = SIEGE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SCA
+	}
+	
+	option = {
+		name = "sca_event_12_opt" #this is the pointer to the localisation
+		set_country_flag = sca_baltic_independence_war_flag
+		LVA = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_super_badboy
+			}
+		}
+	}
+}
+
+# End of Baltic uprising
+country_event = {
+	id = sca_events.13
+	title = "sca_event_13_title"
+	desc = "sca_event_13_desc"
 	picture = WOUNDED_SOLDIERS_eventPicture
 
 	fire_only_once = yes
+	is_triggered_only = yes
 	
 	trigger = {
 		tag = SCA
@@ -423,18 +471,142 @@ country_event = {
 		NOT = { war_with = EST }
 		has_country_flag = sca_baltic_independence_war_flag
 	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
 
 	option = {
-		name = "sca_event_12_opt" #this is the pointer to the localisation
+		name = "sca_event_13_opt" #this is the pointer to the localisation
 		SCA = {
 			add_country_modifier = { 
 				name = sca_increased_unity_modifier
-				duration = 18250 # 50 years
+				duration = 7300 # 20 years
 			}
+		}
+	}
+}
+
+# Unrest in the south
+country_event = {
+	id = sca_events.14
+	title = "sca_event_14_title"
+	desc = "sca_event_14_desc"
+	picture = BORDER_TENSION_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_modifier = denmark_reclaimed_modifier
+		exists = POM
+		exists = PRU
+		NOT = {
+			OR = {
+				POM = { vassal_of = ROOT }
+				PRU = { vassal_of = ROOT }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	option = {
+		name = "sca_event_14_opt" #this is the pointer to the localisation
+		POM = {
+			form_coalition_against = SCA
+		}
+		PRU = {
+			form_coalition_against = SCA
+		}
+		hidden_effect = {
+			country_event = {
+				id = sca_events.15 # Liberating Denmark
+			}
+		}
+	}
+}
+
+# Liberating Denmark
+country_event = {
+	id = sca_events.15
+	title = "sca_event_15_title"
+	desc = "sca_event_15_desc"
+	picture = SIEGE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SCA
+	}
+	
+	option = {
+		name = "sca_event_15_opt" #this is the pointer to the localisation
+		set_country_flag = sca_southern_independence_war_flag
+		POM = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_liberation
+			}
+		}
+		PRU = {
+			create_general = 100
+			capital_scope = {
+				add_unit_construction = {
+					type = infantry
+					amount = 20
+					speed = 0.1
+					cost = 0
+					mercenary = yes
+				}
+				add_unit_construction = {
+					type = cavalry
+					amount = 4
+					speed = 0.1
+					cost = 0
+					mercenary = yes
+				}
+				add_unit_construction = {
+					type = artillery
+					amount = 12
+					speed = 0.1
+					cost = 0
+					mercenary = yes
+				}
+			}
+			add_country_modifier = { 
+				name = prussian_rebels
+				duration = -1 # Removed on peace
+			}
+		}
+	}
+}
+
+# End of Danish Liberation
+country_event = {
+	id = sca_events.16
+	title = "sca_event_16_title"
+	desc = "sca_event_16_desc"
+	picture = WOUNDED_SOLDIERS_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SCA
+		NOT = { war_with = POM }
+		NOT = { war_with = PRU }
+		has_country_flag = sca_southern_independence_war_flag
+	}
+
+	option = {
+		name = "sca_event_16_opt" #this is the pointer to the localisation
+		SCA = {
+			add_country_modifier = { 
+				name = sca_increased_unity_modifier
+				duration = 7300 # 20 years
+			}
+		}
+		PRU = {
+			remove_country_modifier = prussian_rebels
 		}
 	}
 }
