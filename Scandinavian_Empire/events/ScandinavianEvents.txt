@@ -524,63 +524,6 @@ country_event = {
 	}
 }
 
-# Liberating Denmark
-country_event = {
-	id = sca_events.15
-	title = "sca_event_15_title"
-	desc = "sca_event_15_desc"
-	picture = SIEGE_eventPicture
-
-	fire_only_once = yes
-	is_triggered_only = yes
-	
-	trigger = {
-		tag = SCA
-	}
-	
-	option = {
-		name = "sca_event_15_opt" #this is the pointer to the localisation
-		set_country_flag = sca_southern_independence_war_flag
-		POM = {
-			declare_war_with_cb = {
-				who = ROOT
-				casus_belli = cb_liberation
-			}
-		}
-		PRU = {
-			create_general = 100
-			capital_scope = {
-				add_unit_construction = {
-					type = infantry
-					amount = 20
-					speed = 0.1
-					cost = 0
-					mercenary = yes
-				}
-				add_unit_construction = {
-					type = cavalry
-					amount = 4
-					speed = 0.1
-					cost = 0
-					mercenary = yes
-				}
-				add_unit_construction = {
-					type = artillery
-					amount = 12
-					speed = 0.1
-					cost = 0
-					mercenary = yes
-				}
-			}
-			add_country_modifier = { 
-				name = prussian_rebels
-				duration = -1 # Removed on peace
-			}
-		}
-	}
-}
-
-# End of Danish Liberation
 country_event = {
 	id = sca_events.16
 	title = "sca_event_16_title"
@@ -606,7 +549,62 @@ country_event = {
 			}
 		}
 		PRU = {
-			remove_country_modifier = prussian_rebels
+			remove_country_modifier = prussian_rebels_modifier
+		}
+	}
+}
+
+# Liberating Denmark
+country_event = {
+	id = sca_events.15
+	title = "sca_event_15_title"
+	desc = "sca_event_15_desc"
+	picture = SIEGE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SCA
+	}
+	
+	option = {
+		name = "sca_event_15_opt" #this is the pointer to the localisation
+		set_country_flag = sca_southern_independence_war_flag
+		POM = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_super_badboy
+			}
+		}
+		PRU = {
+			create_general = { tradition = 100 }
+			capital_scope = {
+				mercenary_infantry = PRU
+				mercenary_infantry = PRU
+				mercenary_infantry = PRU
+				mercenary_infantry = PRU
+				mercenary_infantry = PRU
+				mercenary_infantry = PRU
+				mercenary_infantry = PRU
+				mercenary_infantry = PRU
+				mercenary_infantry = PRU
+				mercenary_infantry = PRU
+				mercenary_infantry = PRU
+				mercenary_infantry = PRU
+				mercenary_infantry = PRU
+				mercenary_infantry = PRU
+				mercenary_infantry = PRU
+				mercenary_infantry = PRU
+				mercenary_cavalry = PRU
+				mercenary_cavalry = PRU
+				mercenary_cavalry = PRU
+				mercenary_cavalry = PRU
+			}
+			add_country_modifier = { 
+				name = prussian_rebels_modifier
+				duration = -1 # Removed on peace
+			}
 		}
 	}
 }

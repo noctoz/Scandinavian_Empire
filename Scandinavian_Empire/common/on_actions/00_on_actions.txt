@@ -231,6 +231,9 @@ on_peace_actor = {
 	events = {
 		usa_dlc.36				# Evacuation Day
 		native_americans.7		# Appoint Peace Chief
+		sca_events.2 # End of Danish Rebellion
+		sca_events.13 # End of Baltic uprising
+		sca_events.16 # End of Danish Liberation
 	}
 }
 
