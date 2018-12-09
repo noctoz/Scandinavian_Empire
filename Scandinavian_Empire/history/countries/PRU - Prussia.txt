@@ -20,7 +20,6 @@ capital = 40 # Memel
 	add_ruler_personality = greedy_personality
 }
 1444.11.11 = {
-	capital = 41
 	add_treasury = 53
 	add_prestige = 3373
 }

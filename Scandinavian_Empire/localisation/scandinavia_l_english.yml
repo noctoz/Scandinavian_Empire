@@ -43,6 +43,8 @@
  sca_prospecting_the_skands:0 "Prospecting the Skands"
  prussian_rebels_modifier:0 "Prussian Rebels"
  desc_prussian_rebels_modifier:0 "A big mercenary company has joined the cause, almost for free."
+ sca_embassies_modifier:0 "Scandinavian Embassies"
+ desc_sca_embassies_modifier:0 "We have establishes embassies in our allied countries in the south, making our administration more efficient."
  # Missions
  integrate_finland_title:0 "Integrate Finland"
  integrate_finland_desc:0 "We need to bring the empire together before we face the rest of the world and this starts by integrating Finland."

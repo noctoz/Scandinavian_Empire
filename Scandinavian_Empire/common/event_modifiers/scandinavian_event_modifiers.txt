@@ -125,3 +125,7 @@ sca_prospecting_the_skands = {
 prussian_rebels_modifier = {
 	merc_maintenance_modifier = -0.9
 }
+
+sca_embassies_modifier = {
+	diplomatic_upkeep = 1
+}
