@@ -305,6 +305,7 @@ guyenne_area = { #3
 }
 
 pyrenees_area = { #3
+	174 175 176 173
 }
 
 languedoc_area = { #4
