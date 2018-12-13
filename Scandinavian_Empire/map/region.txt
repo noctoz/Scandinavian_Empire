@@ -182,6 +182,8 @@ iberia_region = {
 		beieras_area
 		macaronesia_area
 		basque_country
+		galicia_area
+		baleares_area
 	}
 }
 
@@ -307,6 +309,7 @@ maghreb_region = {
 		southern_morocco_area
 		western_morocco_area
 		tripolitania_area
+		barbary_coast_area
 	}
 }
 
@@ -954,6 +957,9 @@ colombia_region = {
 		popayan_area
 		panama_area
 		maracaibo_area
+		central_llanos_area
+		cordillera_occidental_area
+		colombian_amazonas_area
 	}
 	monsoon = {
 		00.05.01
@@ -1205,6 +1211,9 @@ california_region = {
 		colorado_plateau_area
 		new_mexico_area
 		central_valley_area
+		apacheria_area
+		northern_california_area
+		sonora_area
 	}
 }
 
@@ -1237,20 +1246,37 @@ hudson_bay_region = {
 
 mexico_region = {
 	areas = {
-		coastal_prarie_area
 		eastern_mexico_area
 		mexico_area
 		michoacan_area
 		guerrero_area
 		oaxaca_area
-		texas_area
-		rio_grande_area
-		northeast_mexico_area
 		durango_area
-		sonora_y_sinaloa_area
 		jalisco_area
 		gran_chichimeca_area
+		nayarit_area
+		zacatecas_area
+		tierra_caliente_area
+		puebla_area
+		huasteca_area
+		mixteca_area
+		guanajuato_area
+	}
+	monsoon = {
+		00.06.01
+		00.11.30
+	}
+}
+
+rio_grande_region = {
+	areas = {
+		rio_grande_area
+		northeast_mexico_area
+		texas_area
+		coastal_prarie_area
+		pecos_area
 		llano_estacado_area
+		chihuahua_area
 	}
 	monsoon = {
 		00.06.01
@@ -1266,6 +1292,9 @@ central_america_region = {
 		yucatan_area
 		east_yucatan_area
 		chiapas_area
+		guatemala_lowlands_area
+		costa_rica_area
+		campeche_area
 	}
 	monsoon = {
 		00.06.01
@@ -1278,6 +1307,7 @@ carribeans_region = {
 		cuba_area
 		east_cuba_area
 		hispaniola_area
+		dominica_area
 		greater_antilles_area
 		leeward_islands_area
 		windward_islands_area
