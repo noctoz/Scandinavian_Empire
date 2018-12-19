@@ -471,14 +471,30 @@ country_event = {
 		NOT = { war_with = EST }
 		has_country_flag = sca_baltic_independence_war_flag
 	}
+	
+	immediate = {
+		hidden_effect = {
+			SCA = {
+				add_country_modifier = { 
+					name = sca_increased_unity_modifier
+					duration = 7300 # 20 years
+				}
+			}
+		}		
+	}
 
 	option = {
-		name = "sca_event_13_opt" #this is the pointer to the localisation
+		name = "sca_event_13_opt1" #this is the pointer to the localisation
 		SCA = {
-			add_country_modifier = { 
-				name = sca_increased_unity_modifier
-				duration = 7300 # 20 years
-			}
+			add_stability = -1
+			add_years_of_income = -3
+			vassalize = EST
+		}
+	}
+	option = {
+		name = "sca_event_13_opt2" #this is the pointer to the localisation
+		SCA = {
+			add_dip_power = 100
 		}
 	}
 }
@@ -520,36 +536,6 @@ country_event = {
 			country_event = {
 				id = sca_events.15 # Liberating Denmark
 			}
-		}
-	}
-}
-
-country_event = {
-	id = sca_events.16
-	title = "sca_event_16_title"
-	desc = "sca_event_16_desc"
-	picture = WOUNDED_SOLDIERS_eventPicture
-
-	fire_only_once = yes
-	is_triggered_only = yes
-	
-	trigger = {
-		tag = SCA
-		NOT = { war_with = POM }
-		NOT = { war_with = PRU }
-		has_country_flag = sca_southern_independence_war_flag
-	}
-
-	option = {
-		name = "sca_event_16_opt" #this is the pointer to the localisation
-		SCA = {
-			add_country_modifier = { 
-				name = sca_increased_unity_modifier
-				duration = 7300 # 20 years
-			}
-		}
-		PRU = {
-			remove_country_modifier = prussian_rebels_modifier
 		}
 	}
 }
@@ -605,6 +591,59 @@ country_event = {
 				name = prussian_rebels_modifier
 				duration = -1 # Removed on peace
 			}
+		}
+	}
+}
+
+country_event = {
+	id = sca_events.16
+	title = "sca_event_16_title"
+	desc = "sca_event_16_desc"
+	picture = WOUNDED_SOLDIERS_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SCA
+		NOT = { war_with = POM }
+		NOT = { war_with = PRU }
+		has_country_flag = sca_southern_independence_war_flag
+	}
+	
+	immediate = {
+		hidden_effect = {
+			PRU = {
+				remove_country_modifier = prussian_rebels_modifier
+			}
+			SCA = {
+				add_country_modifier = { 
+					name = sca_increased_unity_modifier
+					duration = 7300 # 20 years
+				}
+			}
+		}		
+	}
+
+	option = {
+		name = "sca_event_16_opt1" #this is the pointer to the localisation
+		SCA = {
+			add_years_of_income = -2
+			vassalize = POM
+		}
+	}
+	option = {
+		name = "sca_event_16_opt2" #this is the pointer to the localisation
+		SCA = {
+			add_dip_power = -200
+			vassalize = POM
+		}
+	}
+	option = {
+		name = "sca_event_16_opt3" #this is the pointer to the localisation
+		SCA = {
+			add_treasury = 50
+			add_dip_power = 50
 		}
 	}
 }
